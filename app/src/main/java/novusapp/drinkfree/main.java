@@ -12,6 +12,14 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+/*  main.java
+    Contains all of the necessary visuals to show users the amount of money saved from not drinking, a random fact about drinking, and the amount of time
+    that has passed since the user has stopped drinking.
+
+    TODO: 1) Add content into the database on firebase. Data on how much each drink cost on average, random facts about alcahol
+          2) Get the content and display them onto this app
+ */
+
 
 public class main extends Activity {
 

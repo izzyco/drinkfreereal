@@ -13,6 +13,12 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+/*
+    Loadingscreen.java
+    Acts like a buffer screen while the application is determining whether the user is already logged in or not.
+ */
+
+// TODO: Determine wheter the user has internet, and make the user turn on internet capabilities if they are off.
 
 public class loadingscreen extends Activity {
 
