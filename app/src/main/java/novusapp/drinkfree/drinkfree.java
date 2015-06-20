@@ -21,6 +21,10 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.Query;
 import com.firebase.client.ValueEventListener;
 
+/* drinkfree.java
+   The login page where people who have signed up previously will automatically go to their account.
+
+ */
 
 public class drinkfree extends Activity {
 
@@ -86,10 +90,7 @@ public class drinkfree extends Activity {
                                 mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(mainIntent);
                             } else {
-                                Log.v("login", "Didnt work :(" + "dbpass: " + dbPass + "dbemail: " + dbEmail);
-                                Log.v("login", "in = " + in);
-                                Log.v("login", "count = " + count);
-                                Log.v("login", "i = " + i);
+                                Toast.makeText(getApplicationContext(), "The password and/or email is incorrect", Toast.LENGTH_LONG);
                             }
                         }
                         passwordBox.getText().clear();

@@ -18,6 +18,8 @@ import com.firebase.client.ValueEventListener;
 
     TODO: 1) Add content into the database on firebase. Data on how much each drink cost on average, random facts about alcahol
           2) Get the content and display them onto this app
+          3) Randomize displayment of data
+          4) Add time stamp for when the current text was first shown, compare that with current day. Change text to a random one if they are not the same.
  */
 
 

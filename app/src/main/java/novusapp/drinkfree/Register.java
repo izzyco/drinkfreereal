@@ -18,6 +18,10 @@ import com.firebase.client.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/* Register.java
+   Adds a new account into the Firebase db.
+
+ */
 
 public class Register extends Activity {
 
