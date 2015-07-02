@@ -46,9 +46,6 @@ public class drinkfree extends Activity {
         final String android_id = Secure.getString(getApplicationContext().getContentResolver(),
                 Secure.ANDROID_ID);
 
-        Log.d("Android ID", android_id);
-
-
         /* Login button to check if this user has already created an account
         *
         * */
@@ -61,47 +58,51 @@ public class drinkfree extends Activity {
                     Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
                 } else if (passwordBox.getText().toString().matches("")) {
                     Toast.makeText(getApplicationContext(), "Please enter a valid password", Toast.LENGTH_LONG).show();
-                }
+                }else {
 
 
-                final Firebase loginRef = myFirebaseRef.child("account");
+                    final Firebase loginRef = myFirebaseRef.child("account");
 
-                // Firebase event listener. Loop through registered users to determine if the login is correct or not.
-                loginRef.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        int count = (int) dataSnapshot.getChildrenCount();
-                        String dbEmail = "";
-                        String dbPass = "";
-                        for (int i = 0; i <= count; i++) {
-                            String in = Integer.toString(i);
-                            if (dataSnapshot.child(in).child("email").getValue() != null) {
-                                dbEmail = dataSnapshot.child(in).child("email").getValue().toString();
+                    Toast.makeText(getApplicationContext(), "Email : " + emailBox.getText().toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Password :" + passwordBox.getText().toString(), Toast.LENGTH_LONG).show();
+
+                    // Firebase event listener. Loop through registered users to determine if the login is correct or not.
+                    loginRef.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            int count = (int) dataSnapshot.getChildrenCount();
+                            String dbEmail = "";
+                            String dbPass = "";
+                            for (int i = 0; i <= count; i++) {
+                                String in = Integer.toString(i);
+                                if (dataSnapshot.child(in).child("email").getValue() != null) {
+                                    dbEmail = dataSnapshot.child(in).child("email").getValue().toString();
+                                }
+
+                                if (dataSnapshot.child(in).child("password").getValue() != null) {
+                                    dbPass = dataSnapshot.child(in).child("password").getValue().toString();
+                                }
+
+                                if (dbEmail.equals(emailBox.getText().toString()) && dbPass.equals(passwordBox.getText().toString())) {
+                                    Log.v("login", "Login and password succeeded " + i);
+                                    myFirebaseRef.child("didlogin").child(android_id).setValue(i);
+                                    Intent mainIntent = new Intent(getApplicationContext(), main.class);
+                                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(mainIntent);
+                                } else {
+                                    Toast.makeText(getApplicationContext(), "The password and/or email is incorrect", Toast.LENGTH_LONG);
+                                }
                             }
-
-                            if (dataSnapshot.child(in).child("password").getValue() != null) {
-                                dbPass = dataSnapshot.child(in).child("password").getValue().toString();
-                            }
-
-                            if (dbEmail.equals(emailBox.getText().toString()) && dbPass.equals(passwordBox.getText().toString())) {
-                                Log.v("login", "Login and password succeeded " + i);
-                                myFirebaseRef.child("didlogin").child(android_id).setValue(i);
-                                Intent mainIntent = new Intent(getApplicationContext(), main.class);
-                                mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                startActivity(mainIntent);
-                            } else {
-                                Toast.makeText(getApplicationContext(), "The password and/or email is incorrect", Toast.LENGTH_LONG);
-                            }
+                            passwordBox.getText().clear();
+                            emailBox.getText().clear();
                         }
-                        passwordBox.getText().clear();
-                        emailBox.getText().clear();
-                    }
 
-                    @Override
-                    public void onCancelled(FirebaseError firebaseError) {
+                        @Override
+                        public void onCancelled(FirebaseError firebaseError) {
 
-                    }
-                });
+                        }
+                    });
+                }
             }
         });
 

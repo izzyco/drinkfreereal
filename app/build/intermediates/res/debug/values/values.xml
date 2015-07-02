@@ -26,6 +26,7 @@
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black_overlay">#66000000</color>
+    <color name="bluegreen">#66FF99</color>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -40,6 +41,11 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="greygreen">#707873</color>
+    <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
@@ -229,7 +235,7 @@
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
     </style>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->

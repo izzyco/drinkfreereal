@@ -17,6 +17,7 @@ import com.firebase.client.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashSet;
 
 /* Register.java
    Adds a new account into the Firebase db.
@@ -61,17 +62,23 @@ public class Register extends Activity {
 
                             Toast.makeText(getApplicationContext(), "Please fill in all of the boxes", Toast.LENGTH_LONG).show();
                         }
-                        // Add the account to the login
-                       int childCount  = (int) dataSnapshot.child("account").getChildrenCount();
-                       childCount++;
-                       String strChildCount = Integer.toString(childCount);
-                        myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
-                        myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
-                        myFirebaseRef.child("account").child(strChildCount).child("password").setValue(passwordBox.getText().toString());
-                        myFirebaseRef.child("account").child(strChildCount).child("full name").setValue(fullnameBox.getText().toString());
-                        myFirebaseRef.child("accountdata").child(strChildCount).child("moneycount").setValue(0);
-                        myFirebaseRef.child("accountdata").child(strChildCount).child("startdata").setValue(sdf.format(cal.getTime()));
-                        myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
+
+                        int childCount  = (int) dataSnapshot.child("account").getChildrenCount();
+                        childCount++;
+                        String strChildCount = Integer.toString(childCount);
+
+                        if(dataSnapshot.child("account").child(strChildCount).child("email").hasChild(emailBox.getText().toString())){
+                            Toast.makeText(getApplicationContext(),"This account is already registered", Toast.LENGTH_LONG).show();
+                        }else {
+                            // Add the account to the login
+                            myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
+                            myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
+                            myFirebaseRef.child("account").child(strChildCount).child("password").setValue(passwordBox.getText().toString());
+                            myFirebaseRef.child("account").child(strChildCount).child("fullname").setValue(fullnameBox.getText().toString());
+                            myFirebaseRef.child("account").child(strChildCount).child("moneycount").setValue(0);
+                            myFirebaseRef.child("account").child(strChildCount).child("startdate").setValue(cal.getTime().toString());
+                            myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
+                        }
                     }
                 });
             }
