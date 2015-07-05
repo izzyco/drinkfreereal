@@ -69,9 +69,17 @@ public class Register extends Activity {
                         childCount++;
                         String strChildCount = Integer.toString(childCount);
 
-                        if(dataSnapshot.child("account").child(strChildCount).child("email").hasChild(emailBox.getText().toString())){
-                            Toast.makeText(getApplicationContext(),"This account is already registered", Toast.LENGTH_LONG).show();
-                        }else {
+                        boolean hasEmail = false;
+                        for(int i = 0; i <= childCount; i++){
+                            if(dataSnapshot.child("account").child(Integer.toString(i)).child("email").exists()){
+                                if(dataSnapshot.child("account").child(Integer.toString(i)).child("email").getValue().toString().contentEquals(emailBox.getText().toString())){
+                                    hasEmail = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if(!hasEmail){
                             // Add the account to the login
                             myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
                             myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
@@ -80,6 +88,9 @@ public class Register extends Activity {
                             myFirebaseRef.child("account").child(strChildCount).child("moneycount").setValue(0);
                             myFirebaseRef.child("account").child(strChildCount).child("startdate").setValue(cal.getTime().toString());
                             myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
+                        }else{
+                            emailBox.getText().clear();
+                            Toast.makeText(getApplicationContext(), "This email is already used", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -92,4 +103,5 @@ public class Register extends Activity {
         });
 
     }
+
 }
