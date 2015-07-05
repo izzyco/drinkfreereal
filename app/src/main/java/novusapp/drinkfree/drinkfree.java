@@ -24,6 +24,9 @@ import com.firebase.client.ValueEventListener;
 /* drinkfree.java
    The login page where people who have signed up previously will automatically go to their account.
 
+
+   TODO: 1) Add the ability to double check the email and make sure someone has not already registered
+
  */
 
 public class drinkfree extends Activity {

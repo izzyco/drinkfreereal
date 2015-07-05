@@ -22,6 +22,8 @@ import java.util.HashSet;
 /* Register.java
    Adds a new account into the Firebase db.
 
+   TODO: 1) Add the ability to double check the email and make sure someone has not already registered
+
  */
 
 public class Register extends Activity {

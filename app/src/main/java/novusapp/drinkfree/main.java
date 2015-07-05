@@ -3,7 +3,11 @@ package novusapp.drinkfree;
 import android.app.Activity;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,14 +26,13 @@ import java.util.concurrent.TimeUnit;
     Contains all of the necessary visuals to show users the amount of money saved from not drinking, a random fact about drinking, and the amount of time
     that has passed since the user has stopped drinking.
 
-    TODO: 1) Add content into the database on firebase. Data on how much each drink cost on average, random facts about alcahol
-          2) Get the content and display them onto this app
-          3) Randomize displayment of data
-          4) Add time stamp for when the current text was first shown, compare that with current day. Change text to a random one if they are not the same.
+    TODO: 1) Add images based on different sets of days they have been alcohol free
+    TODO: 2) Add changes to the text and make things look better.
+    TODO: 3) Add functionality to the reset button, add a dialogBox to make sure user wants to reset
+
  */
 
-
-public class main extends Activity {
+public class main extends ActionBarActivity {
     static double avgDrinkCostPerDay = 3.48;
 
     @Override
@@ -94,6 +97,29 @@ public class main extends Activity {
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_reset) {
+            Toast.makeText(getApplicationContext(), "Resetting User", Toast.LENGTH_LONG).show();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

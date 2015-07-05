@@ -26,7 +26,7 @@
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black_overlay">#66000000</color>
-    <color name="bluegreen">#66FF99</color>
+    <color name="bluegreen">#68d48c</color>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -227,6 +227,7 @@
     <string name="title_activity_main">main</string>
     <string name="title_activity_register">Register</string>
     <string name="title_activity_settings">settings</string>
+    <string name="title_activity_testing">testing</string>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="It Has Been..."
+        android:text="Alcohol Free"
         android:id="@+id/beforeDateText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -61,5 +61,12 @@
         android:layout_alignBottom="@+id/growingImage"
         android:layout_below="@+id/growingImage"
         android:layout_marginTop="50dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressImage"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/layout/activity_main.xml -->

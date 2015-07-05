@@ -27,7 +27,9 @@
         </activity>
         <activity
             android:name="novusapp.drinkfree.main"
-            android:label="@string/title_activity_main" >
+            android:label="Drink Free"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
         <activity
             android:name="novusapp.drinkfree.Register"
