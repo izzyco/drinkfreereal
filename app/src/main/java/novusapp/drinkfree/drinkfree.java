@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.Sampler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +21,8 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.Query;
 import com.firebase.client.ValueEventListener;
+
+import java.util.EventListener;
 
 /* drinkfree.java
    The login page where people who have signed up previously will automatically go to their account.
@@ -55,7 +58,6 @@ public class drinkfree extends Activity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 // Initial check to see if there are values in the text boxes
                 if (emailBox.getText().toString().matches("")) {
                     Toast.makeText(getApplicationContext(), "Please enter a valid email", Toast.LENGTH_LONG).show();
@@ -65,12 +67,12 @@ public class drinkfree extends Activity {
 
 
                     final Firebase loginRef = myFirebaseRef.child("account");
-
+                    ValueEventListener loginListener;
                     Toast.makeText(getApplicationContext(), "Email : " + emailBox.getText().toString(), Toast.LENGTH_LONG).show();
                     Toast.makeText(getApplicationContext(), "Password :" + passwordBox.getText().toString(), Toast.LENGTH_LONG).show();
 
                     // Firebase event listener. Loop through registered users to determine if the login is correct or not.
-                    loginRef.addValueEventListener(new ValueEventListener() {
+                    loginRef.addListenerForSingleValueEvent(loginListener = new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             int count = (int) dataSnapshot.getChildrenCount();
@@ -90,8 +92,8 @@ public class drinkfree extends Activity {
                                     Log.v("login", "Login and password succeeded " + i);
                                     myFirebaseRef.child("didlogin").child(android_id).setValue(i);
                                     Intent mainIntent = new Intent(getApplicationContext(), main.class);
-                                    mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                     startActivity(mainIntent);
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), "The password and/or email is incorrect", Toast.LENGTH_LONG);
                                 }

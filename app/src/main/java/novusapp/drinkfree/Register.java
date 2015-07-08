@@ -51,7 +51,7 @@ public class Register extends Activity {
         final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         // Add listener to add new login for a person. Save the data.
-        myFirebaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(final DataSnapshot dataSnapshot) {
                 signup.setOnClickListener(new View.OnClickListener() {

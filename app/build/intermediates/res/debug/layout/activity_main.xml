@@ -31,7 +31,9 @@
         android:layout_marginTop="61dp"
         android:phoneNumber="false"
         android:textAlignment="center"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        android:elegantTextHeight="true"
+        android:elevation="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -62,11 +64,5 @@
         android:layout_below="@+id/growingImage"
         android:layout_marginTop="50dp" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressImage"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>
 <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/layout/activity_main.xml -->

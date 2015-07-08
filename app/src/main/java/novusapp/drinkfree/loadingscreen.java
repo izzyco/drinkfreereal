@@ -35,7 +35,7 @@ public class loadingscreen extends Activity {
         // Checks to see if the network is available, shows toast if it is not
         if(isNetworkAvailable() == false) {
             Toast.makeText(getApplicationContext(), "Please enable internet", Toast.LENGTH_LONG).show();
-            Log.d("NetworkAvailable", "Hellow");
+            Log.d("NetworkAvailable", "Hello");
         }else {
 
             // Setup Firebase
