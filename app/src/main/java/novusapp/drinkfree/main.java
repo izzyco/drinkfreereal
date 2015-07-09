@@ -38,6 +38,8 @@ import java.util.concurrent.TimeUnit;
 
 public class main extends ActionBarActivity {
     static double avgDrinkCostPerDay = 3.48;
+    ValueEventListener listener;
+    String account_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,12 +57,17 @@ public class main extends ActionBarActivity {
         final TextView countText = (TextView) this.findViewById(R.id.dateText);
 
 
-        myFirebaseRef.addValueEventListener(new ValueEventListener() {
+        myFirebaseRef.addValueEventListener(listener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String account_id = dataSnapshot.child("didlogin").child(phone_id).getValue().toString();
+                account_id = dataSnapshot.child("didlogin").child(phone_id).getValue().toString();
                 Log.v("Account ID", account_id);
-                String account_name = dataSnapshot.child("account").child(account_id).child("fullname").getValue().toString();
+                String account_name;
+                if(dataSnapshot.child("account").child(account_id).child("fullname").getValue() != null){
+                    account_name = dataSnapshot.child("account").child(account_id).child("fullname").getValue().toString();
+                }else{
+                    account_name = "";
+                }
 
                 Calendar endCal = Calendar.getInstance();
                 endCal.getTime();
@@ -145,13 +152,18 @@ public class main extends ActionBarActivity {
     }
 
     private void resetUser(){
+        //Setup firebase
         Firebase.setAndroidContext(getApplicationContext());
         final Firebase myFirebaseRef = new Firebase("https://drinkfreeapp.firebaseio.com/");
-        myFirebaseRef.child("didlogin").child(getPhoneId()).setValue(null);
-        Intent i = getBaseContext().getPackageManager()
-                .getLaunchIntentForPackage( getBaseContext().getPackageName() );
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
+
+        //Get calender time
+        final Calendar cal = Calendar.getInstance();
+        cal.getTime();
+        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+        myFirebaseRef.child("account").child(account_id).child("moneycount").setValue(0);
+        myFirebaseRef.child("account").child(account_id).child("startdate").setValue(cal.getTime().toString());
     }
 
     private String getPhoneId(){
