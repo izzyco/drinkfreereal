@@ -439,7 +439,6 @@ int id action_settings 0x7f0b0072
 int id activity_chooser_view_content 0x7f0b0026
 int id alertTitle 0x7f0b0030
 int id always 0x7f0b0016
-int id beforeDateText 0x7f0b005a
 int id beginning 0x7f0b0013
 int id buttonPanel 0x7f0b0036
 int id cancel_action 0x7f0b0066
@@ -485,6 +484,7 @@ int id media_actions 0x7f0b0068
 int id middle 0x7f0b0015
 int id moneyText 0x7f0b005b
 int id multiply 0x7f0b001e
+int id name 0x7f0b005a
 int id nameTI 0x7f0b0063
 int id never 0x7f0b0019
 int id none 0x7f0b000e

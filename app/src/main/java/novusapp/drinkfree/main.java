@@ -55,18 +55,16 @@ public class main extends ActionBarActivity {
         final TextView tipText = (TextView) this.findViewById(R.id.tipText);
         final TextView moneyText = (TextView) this.findViewById(R.id.moneyText);
         final TextView countText = (TextView) this.findViewById(R.id.dateText);
+        final TextView nameText = (TextView) this.findViewById(R.id.name);
 
-
-        myFirebaseRef.addValueEventListener(listener = new ValueEventListener() {
+        myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 account_id = dataSnapshot.child("didlogin").child(phone_id).getValue().toString();
                 Log.v("Account ID", account_id);
-                String account_name;
+                String account_name = "DrinkFree User";
                 if(dataSnapshot.child("account").child(account_id).child("fullname").getValue() != null){
                     account_name = dataSnapshot.child("account").child(account_id).child("fullname").getValue().toString();
-                }else{
-                    account_name = "";
                 }
 
                 Calendar endCal = Calendar.getInstance();
@@ -75,14 +73,15 @@ public class main extends ActionBarActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.US);
                 try {
                     startCal.setTime(sdf.parse(dataSnapshot.child("account").child(account_id).child("startdate").getValue().toString()));
-                } catch (Exception e) {
-                    // Can potentially catch an IO parse exception here
-                    e.printStackTrace();
+                }catch(Exception e){
+                  // Can potentially catch an IO parse exception here
+                  e.printStackTrace();
                 }
                 int dateCount = diffCountTime(startCal, endCal);
                 double moneyCount = dateCount * avgDrinkCostPerDay;
 
-                countText.setText(Integer.toString(dateCount) + " Days");
+                nameText.setText("Welcome, " + account_name);
+                countText.setText("Date Counter: " +Integer.toString(dateCount) + " Days");
                 moneyText.setText("Money Saved: " + Double.toString(moneyCount));
                 Toast.makeText(getApplicationContext(), "Date Count: " + dateCount, Toast.LENGTH_LONG).show();
 
@@ -104,8 +103,11 @@ public class main extends ActionBarActivity {
 
             public int diffCountTime(Calendar startDate, Calendar endDate) {
                 long end = endDate.getTimeInMillis();
+                end = TimeUnit.MILLISECONDS.toDays(end);
                 long start = startDate.getTimeInMillis();
-                return (int) TimeUnit.MILLISECONDS.toDays(Math.abs(end - start));
+                start = TimeUnit.MILLISECONDS.toDays(start);
+                Log.v("DiffCount", "End: " + end + "Start: " + start + "    Computed: " + TimeUnit.MILLISECONDS.toDays(Math.abs(end - start)));
+                return (int) (end - start);
             }
         });
 
@@ -159,8 +161,7 @@ public class main extends ActionBarActivity {
         //Get calender time
         final Calendar cal = Calendar.getInstance();
         cal.getTime();
-        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
+        final SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
 
         myFirebaseRef.child("account").child(account_id).child("moneycount").setValue(0);
         myFirebaseRef.child("account").child(account_id).child("startdate").setValue(cal.getTime().toString());

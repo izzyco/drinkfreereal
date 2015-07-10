@@ -1562,7 +1562,6 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0b0026;
         public static final int alertTitle=0x7f0b0030;
         public static final int always=0x7f0b0016;
-        public static final int beforeDateText=0x7f0b005a;
         public static final int beginning=0x7f0b0013;
         public static final int buttonPanel=0x7f0b0036;
         public static final int cancel_action=0x7f0b0066;
@@ -1608,6 +1607,7 @@ containing a value of this type.
         public static final int middle=0x7f0b0015;
         public static final int moneyText=0x7f0b005b;
         public static final int multiply=0x7f0b001e;
+        public static final int name=0x7f0b005a;
         public static final int nameTI=0x7f0b0063;
         public static final int never=0x7f0b0019;
         public static final int none=0x7f0b000e;

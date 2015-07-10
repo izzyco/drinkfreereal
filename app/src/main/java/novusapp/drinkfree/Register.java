@@ -63,34 +63,35 @@ public class Register extends Activity {
                                 || passwordBox.getText().toString().matches("")){
 
                             Toast.makeText(getApplicationContext(), "Please fill in all of the boxes", Toast.LENGTH_LONG).show();
-                        }
+                        }else {
 
-                        int childCount  = (int) dataSnapshot.child("account").getChildrenCount();
-                        childCount++;
-                        String strChildCount = Integer.toString(childCount);
+                            int childCount = (int) dataSnapshot.child("account").getChildrenCount();
+                            childCount++;
+                            String strChildCount = Integer.toString(childCount);
 
-                        boolean hasEmail = false;
-                        for(int i = 0; i <= childCount; i++){
-                            if(dataSnapshot.child("account").child(Integer.toString(i)).child("email").exists()){
-                                if(dataSnapshot.child("account").child(Integer.toString(i)).child("email").getValue().toString().contentEquals(emailBox.getText().toString())){
-                                    hasEmail = true;
-                                    break;
+                            boolean hasEmail = false;
+                            for (int i = 0; i <= childCount; i++) {
+                                if (dataSnapshot.child("account").child(Integer.toString(i)).child("email").exists()) {
+                                    if (dataSnapshot.child("account").child(Integer.toString(i)).child("email").getValue().toString().contentEquals(emailBox.getText().toString())) {
+                                        hasEmail = true;
+                                        break;
+                                    }
                                 }
                             }
-                        }
 
-                        if(!hasEmail){
-                            // Add the account to the login
-                            myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
-                            myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
-                            myFirebaseRef.child("account").child(strChildCount).child("password").setValue(passwordBox.getText().toString());
-                            myFirebaseRef.child("account").child(strChildCount).child("fullname").setValue(fullnameBox.getText().toString());
-                            myFirebaseRef.child("account").child(strChildCount).child("moneycount").setValue(0);
-                            myFirebaseRef.child("account").child(strChildCount).child("startdate").setValue(cal.getTime().toString());
-                            myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
-                        }else{
-                            emailBox.getText().clear();
-                            Toast.makeText(getApplicationContext(), "This email is already used", Toast.LENGTH_LONG).show();
+                            if (!hasEmail) {
+                                // Add the account to the login
+                                myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
+                                myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
+                                myFirebaseRef.child("account").child(strChildCount).child("password").setValue(passwordBox.getText().toString());
+                                myFirebaseRef.child("account").child(strChildCount).child("fullname").setValue(fullnameBox.getText().toString());
+                                myFirebaseRef.child("account").child(strChildCount).child("moneycount").setValue(0);
+                                myFirebaseRef.child("account").child(strChildCount).child("startdate").setValue(cal.getTime().toString());
+                                myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
+                            } else {
+                                emailBox.getText().clear();
+                                Toast.makeText(getApplicationContext(), "This email is already used", Toast.LENGTH_LONG).show();
+                            }
                         }
                     }
                 });
