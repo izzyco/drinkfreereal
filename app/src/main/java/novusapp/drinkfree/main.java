@@ -4,10 +4,16 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.renderscript.Sampler;
 import android.support.v7.app.ActionBarActivity;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -81,8 +87,22 @@ public class main extends ActionBarActivity {
                 double moneyCount = dateCount * avgDrinkCostPerDay;
 
                 nameText.setText("Welcome, " + account_name);
-                countText.setText("Date Counter: " +Integer.toString(dateCount) + " Days");
-                moneyText.setText("Money Saved: " + Double.toString(moneyCount));
+
+
+                SpannableStringBuilder countBuilder = new SpannableStringBuilder();
+                countBuilder.append(" ");
+                countBuilder.setSpan(new ImageSpan(getApplication(), R.drawable.calendarimg),
+                        countBuilder.length() - 1, countBuilder.length(), 0);
+                countBuilder.append("  Date Counter: " + Integer.toString(dateCount) + " Days");
+                countText.setText(countBuilder);
+
+                SpannableStringBuilder moneybuilder = new SpannableStringBuilder();
+                moneybuilder.append(" ");
+                moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
+                        moneybuilder.length() - 1, moneybuilder.length(), 0);
+                moneybuilder.append("  Money Saved: " + Double.toString(moneyCount));
+                moneyText.setText(moneybuilder);
+
                 Toast.makeText(getApplicationContext(), "Date Count: " + dateCount, Toast.LENGTH_LONG).show();
 
                 int childrenCount = (int) dataSnapshot.child("fact").getChildrenCount();

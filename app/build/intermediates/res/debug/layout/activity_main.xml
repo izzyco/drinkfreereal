@@ -16,11 +16,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Alcohol Free"
         android:id="@+id/name"
+        android:textSize="30dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:layout_marginBottom="15dp"
-        android:textSize="30dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +31,8 @@
         android:textSize="25dp"
         android:elegantTextHeight="true"
         android:layout_below="@+id/dateText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
