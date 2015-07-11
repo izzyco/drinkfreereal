@@ -66,7 +66,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:paddingTop="50dp"
-        android:layout_below="@+id/growingImage" />
+        android:layout_below="@+id/growingImage"
+        android:textSize="18dp"
+        android:typeface="serif" />
 
 </RelativeLayout>
 <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/layout/activity_main.xml -->
