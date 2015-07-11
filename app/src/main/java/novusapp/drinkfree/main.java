@@ -106,7 +106,7 @@ public class main extends ActionBarActivity {
                 end = TimeUnit.MILLISECONDS.toDays(end);
                 long start = startDate.getTimeInMillis();
                 start = TimeUnit.MILLISECONDS.toDays(start);
-                Log.v("DiffCount", "End: " + end + "Start: " + start + "    Computed: " + TimeUnit.MILLISECONDS.toDays(Math.abs(end - start)));
+                //Log.v("DiffCount", "End: " + end + "Start: " + start + "    Computed: " + TimeUnit.MILLISECONDS.toDays(Math.abs(end - start)));
                 return (int) (end - start);
             }
         });

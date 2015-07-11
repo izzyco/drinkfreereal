@@ -27,13 +27,13 @@ import java.util.EventListener;
 /* drinkfree.java
    The login page where people who have signed up previously will automatically go to their account.
 
-
    TODO: 1) Add the ability to double check the email and make sure someone has not already registered
-
  */
+
 
 public class drinkfree extends Activity {
 
+    ValueEventListener loginListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,14 +65,13 @@ public class drinkfree extends Activity {
                     Toast.makeText(getApplicationContext(), "Please enter a valid password", Toast.LENGTH_LONG).show();
                 }else {
 
-
                     final Firebase loginRef = myFirebaseRef.child("account");
 
                     //Toast.makeText(getApplicationContext(), "Email : " + emailBox.getText().toString(), Toast.LENGTH_LONG).show();
                     //Toast.makeText(getApplicationContext(), "Password :" + passwordBox.getText().toString(), Toast.LENGTH_LONG).show();
 
                     // Firebase event listener. Loop through registered users to determine if the login is correct or not.
-                    loginRef.addValueEventListener(new ValueEventListener() {
+                    loginRef.addValueEventListener(loginListener = new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
                             int count = (int) dataSnapshot.getChildrenCount();
@@ -97,6 +96,7 @@ public class drinkfree extends Activity {
                                     myFirebaseRef.child("didlogin").child(android_id).setValue(i);
                                     Intent mainIntent = new Intent(getApplicationContext(), main.class);
                                     startActivity(mainIntent);
+                                    myFirebaseRef.removeEventListener(loginListener);
                                     finish();
                                 } else {
                                     Log.v("Event", "Email Box: "+emailBox.getText().toString());
