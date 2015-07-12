@@ -91,11 +91,11 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
-        android:src="@drawable/novusapplogo"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/novusappLogo"
         android:adjustViewBounds="true"
-        android:maxHeight="400dp"
-        android:maxWidth="160dp" />
+        android:src="@drawable/novusapp"
+        android:maxWidth="160dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

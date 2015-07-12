@@ -22,7 +22,6 @@ import com.firebase.client.ValueEventListener;
     Acts like a buffer screen while the application is determining whether the user is already logged in or not.
  */
 
-// TODO: Determine wheter the user has internet, and make the user turn on internet capabilities if they are off.
 
 public class loadingscreen extends Activity {
 
@@ -74,28 +73,6 @@ public class loadingscreen extends Activity {
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         if(activeNetworkInfo != null) return true;
         else return false;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_loadingscreen, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_reset) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
 }
