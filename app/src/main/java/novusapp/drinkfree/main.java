@@ -37,8 +37,9 @@ import java.util.concurrent.TimeUnit;
     that has passed since the user has stopped drinking.
 
     TODO: 1) Add images based on different sets of days they have been alcohol free
-    TODO: 2) Add changes to the text and make things look better.
-    TODO: 3) Add functionality to the reset button, add a dialogBox to make sure user wants to reset
+    TODO: 2) Add better spacing, maybe change it to look slightly more pleasant for the eys
+    TODO: 3) Add menu bar to navigate to about page
+    TODO: 4) In dialogbox of reset, let the user know the count will be reset to a certain date
 
  */
 

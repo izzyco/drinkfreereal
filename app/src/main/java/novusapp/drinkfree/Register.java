@@ -22,7 +22,8 @@ import java.util.HashSet;
 /* Register.java
    Adds a new account into the Firebase db.
 
-   TODO: 1) Add the ability to double check the email and make sure someone has not already registered
+   TODO: 1) Create a secure system so that the password is masked
+   TODO: 2) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
 
  */
 

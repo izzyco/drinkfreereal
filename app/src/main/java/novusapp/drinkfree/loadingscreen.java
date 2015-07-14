@@ -20,6 +20,9 @@ import com.firebase.client.ValueEventListener;
 /*
     Loadingscreen.java
     Acts like a buffer screen while the application is determining whether the user is already logged in or not.
+
+   TODO: 1) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
+
  */
 
 

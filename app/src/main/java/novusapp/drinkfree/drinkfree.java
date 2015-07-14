@@ -27,7 +27,8 @@ import java.util.EventListener;
 /* drinkfree.java
    The login page where people who have signed up previously will automatically go to their account.
 
-   TODO: 1) Add the ability to double check the email and make sure someone has not already registered
+   TODO: 1) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
+
  */
 
 
