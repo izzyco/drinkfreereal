@@ -1597,7 +1597,6 @@ containing a value of this type.
         public static final int imageView=0x7f0b0056;
         public static final int imageView2=0x7f0b0058;
         public static final int imageView3=0x7f0b0055;
-        public static final int imageView4=0x7f0b0064;
         public static final int info=0x7f0b0070;
         public static final int internetConnection=0x7f0b0057;
         public static final int line1=0x7f0b006a;
@@ -1615,6 +1614,7 @@ containing a value of this type.
         public static final int never=0x7f0b0019;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
+        public static final int novusappLogo=0x7f0b0064;
         public static final int parentPanel=0x7f0b002d;
         public static final int passwordBox=0x7f0b0052;
         public static final int passwordTI=0x7f0b0061;

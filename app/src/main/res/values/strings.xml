@@ -11,8 +11,8 @@
     <string name="title_activity_settings">settings</string>
 
     <string name="title_activity_loadscreen">loadscreen</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
     <string name="title_activity_loadingscreen">loadingscreen</string>
     <string name="title_activity_testing">testing</string>
 

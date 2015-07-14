@@ -89,17 +89,14 @@
         android:hint="full name" />
 
     <ImageView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
-        android:src="@drawable/novusapp"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/novusappLogo"
         android:adjustViewBounds="true"
-        android:maxHeight="30dp"
+        android:src="@drawable/novusapp"
         android:maxWidth="160dp"
-        android:background="#ffffff"
-        android:elevation="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
 <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/layout/activity_register.xml -->
