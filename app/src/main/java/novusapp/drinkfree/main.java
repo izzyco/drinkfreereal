@@ -152,7 +152,7 @@ public class main extends ActionBarActivity {
             //Toast.makeText(getApplicationContext(), "Resetting User", Toast.LENGTH_LONG).show();
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("Do you want to reset?");
-            // alert.setMessage("Message");
+            alert.setMessage("This will reset your count, cost, and anything else currently on the account. Everything will reset to a new account.");
 
             alert.setPositiveButton("Yes, Reset", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
