@@ -1742,10 +1742,10 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f050010;
         public static final int action_settings=0x7f050011;
         public static final int app_name=0x7f050012;
-        public static final int dummy_button=0x7f050013;
-        public static final int dummy_content=0x7f050014;
-        public static final int hello_world=0x7f050015;
-        public static final int logo=0x7f050016;
+        public static final int hello_world=0x7f050013;
+        public static final int login=0x7f050014;
+        public static final int logo=0x7f050015;
+        public static final int register=0x7f050016;
         public static final int status_bar_notification_info_overflow=0x7f050017;
         public static final int title_activity_loadingscreen=0x7f050018;
         public static final int title_activity_loadscreen=0x7f050019;

@@ -611,10 +611,10 @@ int string abc_shareactionprovider_share_with_application 0x7f05000c
 int string abc_toolbar_collapse_description 0x7f050010
 int string action_settings 0x7f050011
 int string app_name 0x7f050012
-int string dummy_button 0x7f050013
-int string dummy_content 0x7f050014
-int string hello_world 0x7f050015
-int string logo 0x7f050016
+int string hello_world 0x7f050013
+int string login 0x7f050014
+int string logo 0x7f050015
+int string register 0x7f050016
 int string status_bar_notification_info_overflow 0x7f050017
 int string title_activity_loadingscreen 0x7f050018
 int string title_activity_loadscreen 0x7f050019
