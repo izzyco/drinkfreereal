@@ -15,5 +15,6 @@
     <string name="register">Register</string>
     <string name="title_activity_loadingscreen">loadingscreen</string>
     <string name="title_activity_testing">testing</string>
+    <string name="title_activity_about">about</string>
 
 </resources>

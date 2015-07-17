@@ -9,8 +9,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".loadingscreen"
             android:label="@string/app_name" >
@@ -23,24 +22,27 @@
         <activity
             android:name=".main"
             android:label="Drink Free"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
         <activity
             android:name=".Register"
             android:label="@string/title_activity_register"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".settings"
             android:label="@string/title_activity_settings"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".drinkfree"
             android:label="DrinkFree"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".about"
+            android:label="@string/title_activity_about" >
         </activity>
     </application>
 

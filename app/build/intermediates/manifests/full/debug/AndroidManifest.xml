@@ -46,6 +46,10 @@
             android:label="DrinkFree"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="novusapp.drinkfree.about"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>

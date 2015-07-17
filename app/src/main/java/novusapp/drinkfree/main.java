@@ -37,7 +37,6 @@ import java.util.concurrent.TimeUnit;
     that has passed since the user has stopped drinking.
 
     TODO: 1) Add images based on different sets of days they have been alcohol free
-    TODO: 2) Add better spacing, maybe change it to look slightly more pleasant for the eys
     TODO: 3) Add menu bar to navigate to about page
     TODO: 4) In dialogbox of reset, let the user know the count will be reset to a certain date
 
@@ -70,7 +69,7 @@ public class main extends ActionBarActivity {
                 account_id = dataSnapshot.child("didlogin").child(phone_id).getValue().toString();
                 Log.v("Account ID", account_id);
                 String account_name = "DrinkFree User";
-                if(dataSnapshot.child("account").child(account_id).child("fullname").getValue() != null){
+                if (dataSnapshot.child("account").child(account_id).child("fullname").getValue() != null) {
                     account_name = dataSnapshot.child("account").child(account_id).child("fullname").getValue().toString();
                 }
 
@@ -80,9 +79,9 @@ public class main extends ActionBarActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.US);
                 try {
                     startCal.setTime(sdf.parse(dataSnapshot.child("account").child(account_id).child("startdate").getValue().toString()));
-                }catch(Exception e){
-                  // Can potentially catch an IO parse exception here
-                  e.printStackTrace();
+                } catch (Exception e) {
+                    // Can potentially catch an IO parse exception here
+                    e.printStackTrace();
                 }
                 int dateCount = diffCountTime(startCal, endCal);
                 double moneyCount = dateCount * avgDrinkCostPerDay;
@@ -169,6 +168,9 @@ public class main extends ActionBarActivity {
 
             alert.show();
             return true;
+        }else if(id == R.id.action_about){
+            Intent mainIntent = new Intent(getApplicationContext(), about.class);
+            startActivity(mainIntent);
         }
 
         return super.onOptionsItemSelected(item);
