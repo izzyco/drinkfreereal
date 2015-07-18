@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
@@ -59,12 +60,12 @@ public class Register extends Activity {
                     @Override
                     public void onClick(View view) {
                         // Checks to make sure the text is not blank when submitted
-                        if(usernameBox.getText().toString().matches("")
+                        if (usernameBox.getText().toString().matches("")
                                 || emailBox.getText().toString().matches("")
-                                || passwordBox.getText().toString().matches("")){
+                                || passwordBox.getText().toString().matches("")) {
 
                             Toast.makeText(getApplicationContext(), "Please fill in all of the boxes", Toast.LENGTH_LONG).show();
-                        }else {
+                        } else {
 
                             int childCount = (int) dataSnapshot.child("account").getChildrenCount();
                             childCount++;
@@ -101,6 +102,15 @@ public class Register extends Activity {
             @Override
             public void onCancelled(FirebaseError firebaseError) {
 
+            }
+        });
+
+        // Clicking the logo creates a toast showing Novus App
+        ImageView logo = (ImageView) findViewById(R.id.register_logo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Created from Novus App ( Novusapp.com )", Toast.LENGTH_LONG).show();
             }
         });
 

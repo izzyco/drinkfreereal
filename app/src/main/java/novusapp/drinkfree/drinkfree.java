@@ -129,6 +129,14 @@ public class drinkfree extends Activity {
             }
         });
 
+        // Clicking the logo creates a toast showing Novus App
+        ImageView logo = (ImageView) findViewById(R.id.login_logo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Created from Novus App ( Novusapp.com )", Toast.LENGTH_LONG ).show();
+            }
+        });
 
 
     }

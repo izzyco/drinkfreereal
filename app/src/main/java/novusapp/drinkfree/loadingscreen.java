@@ -10,6 +10,8 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
@@ -22,7 +24,6 @@ import com.firebase.client.ValueEventListener;
     Acts like a buffer screen while the application is determining whether the user is already logged in or not.
 
    TODO: 1) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
-
  */
 
 
@@ -65,6 +66,15 @@ public class loadingscreen extends Activity {
                 @Override
                 public void onCancelled(FirebaseError firebaseError) {
 
+                }
+            });
+
+            // Clicking the logo creates a toast showing Novus App
+            ImageView logo = (ImageView) findViewById(R.id.loading_logo);
+            logo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(getApplicationContext(), "Created from Novus App ( Novusapp.com )", Toast.LENGTH_LONG).show();
                 }
             });
         }

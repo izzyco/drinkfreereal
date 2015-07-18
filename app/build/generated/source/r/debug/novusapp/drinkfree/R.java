@@ -1600,7 +1600,7 @@ containing a value of this type.
         public static final int imageView2=0x7f0b005c;
         public static final int imageView3=0x7f0b0059;
         public static final int imageView4=0x7f0b004f;
-        public static final int imageView5=0x7f0b0051;
+        public static final int about_logo =0x7f0b0051;
         public static final int info=0x7f0b0074;
         public static final int internetConnection=0x7f0b005b;
         public static final int line1=0x7f0b006e;

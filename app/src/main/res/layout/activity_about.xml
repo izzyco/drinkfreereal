@@ -28,7 +28,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
+        android:id="@+id/about_logo"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/novusapp"
@@ -41,7 +41,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Created by NovusApp - http://novusapp.com"
         android:id="@+id/textView"
-        android:layout_above="@+id/imageView5"
+        android:layout_above="@+id/about_logo"
         android:layout_alignLeft="@+id/imageView4"
         android:layout_alignStart="@+id/imageView4"
         android:textColor="#000000" />

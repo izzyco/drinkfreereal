@@ -37,8 +37,6 @@ import java.util.concurrent.TimeUnit;
     that has passed since the user has stopped drinking.
 
     TODO: 1) Add images based on different sets of days they have been alcohol free
-    TODO: 3) Add menu bar to navigate to about page
-    TODO: 4) In dialogbox of reset, let the user know the count will be reset to a certain date
 
  */
 
@@ -100,7 +98,7 @@ public class main extends ActionBarActivity {
                 moneybuilder.append(" ");
                 moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
                         moneybuilder.length() - 1, moneybuilder.length(), 0);
-                moneybuilder.append("  Money Saved: " + Double.toString(moneyCount));
+                moneybuilder.append("  Money Saved: $" + Double.toString(moneyCount));
                 moneyText.setText(moneybuilder);
 
                 Toast.makeText(getApplicationContext(), "Date Count: " + dateCount, Toast.LENGTH_LONG).show();
