@@ -1,3 +1,10 @@
+/*
+    Loadingscreen.java: Acts like a buffer screen while the application is determining whether the user is already logged in or not.
+    Author: Ivan Zhang
+    Company: Novusapp.com
+
+ */
+
 package novusapp.drinkfree;
 
 import android.app.Activity;
@@ -19,12 +26,7 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
-/*
-    Loadingscreen.java
-    Acts like a buffer screen while the application is determining whether the user is already logged in or not.
 
-   TODO: 1) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
- */
 
 
 public class loadingscreen extends Activity {

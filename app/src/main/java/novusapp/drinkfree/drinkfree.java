@@ -1,3 +1,10 @@
+/*
+   drinkfree.java : The login page where people who have signed up previously will automatically go to their account.
+   Author : Ivan Zhang
+   Company : Novusapp.com
+
+ */
+
 package novusapp.drinkfree;
 
 import android.app.Activity;
@@ -24,12 +31,6 @@ import com.firebase.client.ValueEventListener;
 
 import java.util.EventListener;
 
-/* drinkfree.java
-   The login page where people who have signed up previously will automatically go to their account.
-
-   TODO: 1) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
-
- */
 
 
 public class drinkfree extends Activity {

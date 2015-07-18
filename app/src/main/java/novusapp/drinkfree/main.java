@@ -1,22 +1,24 @@
+/*
+    main.java: Contains all of the necessary visuals to show users the amount of money saved from not drinking, a random fact about drinking, and the amount of time
+    that has passed since the user has stopped drinking.
+    Author : Ivan Zhang
+    Company : Novusapp.com
+
+    TODO: 1) Add images based on different sets of days they have been alcohol free
+ */
+
 package novusapp.drinkfree;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.renderscript.Sampler;
 import android.support.v7.app.ActionBarActivity;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,13 +34,6 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-/*  main.java
-    Contains all of the necessary visuals to show users the amount of money saved from not drinking, a random fact about drinking, and the amount of time
-    that has passed since the user has stopped drinking.
-
-    TODO: 1) Add images based on different sets of days they have been alcohol free
-
- */
 
 public class main extends ActionBarActivity {
     static double avgDrinkCostPerDay = 3.48;

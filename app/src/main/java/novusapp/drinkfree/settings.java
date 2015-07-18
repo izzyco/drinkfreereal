@@ -1,3 +1,10 @@
+/*
+    settings.java: Will be useful later on with the additions of friends and family who will be able to track the user
+    Author: Ivan Zhang
+    Company: Novusapp.com
+
+*/
+
 package novusapp.drinkfree;
 
 import android.app.Activity;
@@ -9,9 +16,6 @@ import android.view.MenuItem;
 
 import com.firebase.client.Firebase;
 
-/*  settings.java
-    The settings page allowing users to contact back to me as the admin for different tasks.
-*/
 
 public class settings extends Activity {
 

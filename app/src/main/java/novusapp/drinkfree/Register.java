@@ -1,3 +1,14 @@
+/*
+   Register.java : This allows users to sign up if they have not already done so. Once they have registered,
+   they will immediately be directed to the home page(main.java).
+
+   Author : Ivan Zhang
+   Company : Novusapp.com
+
+   TODO: 1) Create a secure system so that the password is masked
+
+ */
+
 package novusapp.drinkfree;
 
 import android.app.Activity;
@@ -19,14 +30,6 @@ import com.firebase.client.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashSet;
-
-/* Register.java
-   Adds a new account into the Firebase db.
-
-   TODO: 1) Create a secure system so that the password is masked
-   TODO: 2) When clicking on the novusapp imageview, show a toast linking back to http://novusapp.com
-
- */
 
 public class Register extends Activity {
 

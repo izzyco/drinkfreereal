@@ -1,3 +1,9 @@
+/*
+    About.java : A page that is started through the main.java page. It gives a description of what DrinkFree.
+    Author : Ivan Zhang
+    Company : Novusapp.com
+ */
+
 package novusapp.drinkfree;
 
 import android.support.v7.app.ActionBarActivity;
