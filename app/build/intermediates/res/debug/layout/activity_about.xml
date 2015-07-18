@@ -19,11 +19,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="About DrinkFree"
+        android:text="DrinkFree is a mobile companion app targeting users who wish to quit drinking. It comes with the ability to track the amount of days since someone has last drank and additionally the average cost saved from not drinking. "
         android:id="@+id/AboutView"
+        android:paddingTop="15dp"
         android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView5"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/novusapp"
+        android:adjustViewBounds="true"
+        android:maxWidth="140dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Created by NovusApp - http://novusapp.com"
+        android:id="@+id/textView"
+        android:layout_above="@+id/imageView5"
         android:layout_alignLeft="@+id/imageView4"
         android:layout_alignStart="@+id/imageView4"
-        android:paddingTop="15dp" />
+        android:textColor="#000000" />
 </RelativeLayout>
 <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/layout/activity_about.xml -->
