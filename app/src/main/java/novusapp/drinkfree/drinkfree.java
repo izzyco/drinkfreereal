@@ -109,8 +109,6 @@ public class drinkfree extends Activity {
                             }
                             passwordBox.getText().clear();
                             emailBox.getText().clear();
-
-                            Toast.makeText(getApplicationContext(), "Ello Bud", Toast.LENGTH_LONG);
                         }
 
                         @Override

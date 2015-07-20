@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.client.DataSnapshot;
@@ -37,8 +38,11 @@ public class loadingscreen extends Activity {
         setContentView(R.layout.activity_loadingscreen);
         Firebase.setAndroidContext(getApplicationContext());
 
+        TextView text = (TextView) findViewById(R.id.internetConnection);
+
         // Checks to see if the network is available, shows toast if it is not
         if(isNetworkAvailable() == false) {
+            text.setText("No Internet Connection");
             Toast.makeText(getApplicationContext(), "Please enable internet", Toast.LENGTH_LONG).show();
             Log.d("NetworkAvailable", "Hello");
         }else {

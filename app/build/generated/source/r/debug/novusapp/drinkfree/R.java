@@ -1546,6 +1546,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int AboutView=0x7f0b0050;
+        public static final int about_logo=0x7f0b0051;
         public static final int action0=0x7f0b0069;
         public static final int action_about=0x7f0b0078;
         public static final int action_bar=0x7f0b0040;
@@ -1597,17 +1598,16 @@ containing a value of this type.
         public static final int ifRoom=0x7f0b0018;
         public static final int image=0x7f0b0028;
         public static final int imageView=0x7f0b005a;
-        public static final int imageView2=0x7f0b005c;
-        public static final int imageView3=0x7f0b0059;
         public static final int imageView4=0x7f0b004f;
-        public static final int about_logo =0x7f0b0051;
         public static final int info=0x7f0b0074;
         public static final int internetConnection=0x7f0b005b;
         public static final int line1=0x7f0b006e;
         public static final int line3=0x7f0b0072;
         public static final int listMode=0x7f0b0009;
         public static final int list_item=0x7f0b002a;
+        public static final int loading_logo=0x7f0b005c;
         public static final int loginButton=0x7f0b0057;
+        public static final int login_logo=0x7f0b0059;
         public static final int logo=0x7f0b0054;
         public static final int media_actions=0x7f0b006c;
         public static final int middle=0x7f0b0015;
@@ -1618,7 +1618,6 @@ containing a value of this type.
         public static final int never=0x7f0b0019;
         public static final int none=0x7f0b000e;
         public static final int normal=0x7f0b000a;
-        public static final int novusappLogo=0x7f0b0068;
         public static final int parentPanel=0x7f0b002d;
         public static final int passwordBox=0x7f0b0056;
         public static final int passwordTI=0x7f0b0065;
@@ -1627,6 +1626,7 @@ containing a value of this type.
         public static final int radio=0x7f0b003a;
         public static final int regButton=0x7f0b0058;
         public static final int registerButton=0x7f0b0066;
+        public static final int register_logo=0x7f0b0068;
         public static final int relativelayout=0x7f0b0053;
         public static final int screen=0x7f0b001f;
         public static final int scrollView=0x7f0b0032;
