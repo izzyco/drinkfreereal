@@ -1597,10 +1597,9 @@ containing a value of this type.
         public static final int icon=0x7f0b002b;
         public static final int ifRoom=0x7f0b0018;
         public static final int image=0x7f0b0028;
-        public static final int imageView=0x7f0b005a;
+        public static final int imageView=0x7f0b005b;
         public static final int imageView4=0x7f0b004f;
         public static final int info=0x7f0b0074;
-        public static final int internetConnection=0x7f0b005b;
         public static final int line1=0x7f0b006e;
         public static final int line3=0x7f0b0072;
         public static final int listMode=0x7f0b0009;
@@ -1656,6 +1655,7 @@ containing a value of this type.
         public static final int text2=0x7f0b0071;
         public static final int textSpacerNoButtons=0x7f0b0033;
         public static final int textView=0x7f0b0052;
+        public static final int textView2=0x7f0b005a;
         public static final int time=0x7f0b006f;
         public static final int tipText=0x7f0b0062;
         public static final int title=0x7f0b002c;

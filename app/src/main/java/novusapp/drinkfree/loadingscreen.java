@@ -38,11 +38,11 @@ public class loadingscreen extends Activity {
         setContentView(R.layout.activity_loadingscreen);
         Firebase.setAndroidContext(getApplicationContext());
 
-        TextView text = (TextView) findViewById(R.id.internetConnection);
+        TextView text = (TextView) findViewById(R.id.textView2);
 
         // Checks to see if the network is available, shows toast if it is not
         if(isNetworkAvailable() == false) {
-            text.setText("No Internet Connection");
+            text.setVisibility(View.VISIBLE);
             Toast.makeText(getApplicationContext(), "Please enable internet", Toast.LENGTH_LONG).show();
             Log.d("NetworkAvailable", "Hello");
         }else {
