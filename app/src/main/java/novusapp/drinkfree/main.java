@@ -20,6 +20,7 @@ import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,7 @@ public class main extends ActionBarActivity {
                     account_name = dataSnapshot.child("account").child(account_id).child("fullname").getValue().toString();
                 }
 
+                // Creates the initial calendar instance to determine the count of the account
                 Calendar endCal = Calendar.getInstance();
                 endCal.getTime();
                 Calendar startCal = Calendar.getInstance();
@@ -98,7 +100,27 @@ public class main extends ActionBarActivity {
                 moneybuilder.append("  Money Saved: $" + Double.toString(moneyCount));
                 moneyText.setText(moneybuilder);
 
-                Toast.makeText(getApplicationContext(), "Date Count: " + dateCount, Toast.LENGTH_LONG).show();
+                // Set images based on how long it has been!
+                ImageView growingImage = (ImageView) findViewById(R.id.growingImage);
+                if(dateCount < 7){
+                    // 1 week : 7 Days Notification
+                    growingImage.setImageResource(R.drawable.seedling);
+                }else if(dateCount < 21){
+                    // 3 Weeks Notification
+                    growingImage.setImageResource(R.drawable.seedling);
+                }else if(dateCount < 30){
+                    // 1 month Notification
+                    growingImage.setImageResource(R.drawable.seedling);
+
+                }else if(dateCount < 60){
+                    // 2 month notification
+                    growingImage.setImageResource(R.drawable.seedling);
+
+                }else if(dateCount < 180){
+                    // 1/2 Year Notification
+                    growingImage.setImageResource(R.drawable.seedling);
+
+                }
 
                 // Random tip to show at the time
                 int childrenCount = (int) dataSnapshot.child("fact").getChildrenCount();
