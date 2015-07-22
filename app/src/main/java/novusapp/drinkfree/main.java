@@ -79,9 +79,10 @@ public class main extends ActionBarActivity {
                 int dateCount = diffCountTime(startCal, endCal);
                 double moneyCount = dateCount * avgDrinkCostPerDay;
 
+                // Create welcome text, adds the name if there is a name on the account
                 nameText.setText("Welcome, " + account_name);
 
-
+                // Creates date counter for the user and adds a calendar to the beginning of it
                 SpannableStringBuilder countBuilder = new SpannableStringBuilder();
                 countBuilder.append(" ");
                 countBuilder.setSpan(new ImageSpan(getApplication(), R.drawable.calendarimg),
@@ -89,6 +90,7 @@ public class main extends ActionBarActivity {
                 countBuilder.append("  Date Counter: " + Integer.toString(dateCount) + " Days");
                 countText.setText(countBuilder);
 
+                // Creates the money saved counter, plus adds a money icon at the beginning of it
                 SpannableStringBuilder moneybuilder = new SpannableStringBuilder();
                 moneybuilder.append(" ");
                 moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
@@ -98,6 +100,7 @@ public class main extends ActionBarActivity {
 
                 Toast.makeText(getApplicationContext(), "Date Count: " + dateCount, Toast.LENGTH_LONG).show();
 
+                // Random tip to show at the time
                 int childrenCount = (int) dataSnapshot.child("fact").getChildrenCount();
                 Random rand = new Random();
                 int randCount = rand.nextInt(--childrenCount);
