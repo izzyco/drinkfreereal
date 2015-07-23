@@ -50,11 +50,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/growingImage"
-        android:src="@drawable/seedling"
+        android:src="@drawable/seed"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:maxHeight="100dp"
-        android:maxWidth="100dp"
+        android:maxHeight="140dp"
+        android:maxWidth="140dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

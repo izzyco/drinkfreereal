@@ -119,7 +119,6 @@ public class main extends ActionBarActivity {
                 }else if(dateCount < 180){
                     // 1/2 Year Notification
                     growingImage.setImageResource(R.drawable.seedling);
-
                 }
 
                 // Random tip to show at the time
