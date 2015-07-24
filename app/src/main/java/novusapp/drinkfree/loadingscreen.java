@@ -86,6 +86,7 @@ public class loadingscreen extends Activity {
         }
     }
 
+    // Network method to check if there is connetion to internet or not
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
                 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
