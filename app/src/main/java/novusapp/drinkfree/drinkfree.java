@@ -1,7 +1,9 @@
 /*
-   drinkfree.java : The login page where people who have signed up previously will automatically go to their account.
-   Author : Ivan Zhang
-   Company : Novusapp.com
+   drinkfree.java: The login page where people who have signed up previously will automatically go to their account.
+   Author: Ivan Zhang
+   Company: Novusapp.com
+
+   TODO: 1) Add new security interface where the password would be added together with a hash
 
  */
 

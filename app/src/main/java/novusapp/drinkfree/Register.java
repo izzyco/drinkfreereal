@@ -5,7 +5,7 @@
    Author : Ivan Zhang
    Company : Novusapp.com
 
-   TODO: 1) Create a secure system so that the password is masked
+   TODO: 1) Add new security interface where the password would be added together with a hash, before saved
 
  */
 
