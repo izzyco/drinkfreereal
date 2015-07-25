@@ -418,10 +418,11 @@ int drawable ic_launcher 0x7f02003c
 int drawable introbutton 0x7f02003d
 int drawable logo 0x7f02003e
 int drawable moneyimg 0x7f02003f
-int drawable notification_template_icon_bg 0x7f020043
+int drawable notification_template_icon_bg 0x7f020044
 int drawable novusapp 0x7f020040
 int drawable novusapplogo 0x7f020041
-int drawable seedling 0x7f020042
+int drawable seed 0x7f020042
+int drawable seedling 0x7f020043
 int id AboutView 0x7f0b0050
 int id about_logo 0x7f0b0051
 int id action0 0x7f0b0069

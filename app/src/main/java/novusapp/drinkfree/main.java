@@ -105,21 +105,21 @@ public class main extends ActionBarActivity {
                 ImageView growingImage = (ImageView) findViewById(R.id.growingImage);
                 if(dateCount < 7){
                     // 1 week : 7 Days Notification
-                    growingImage.setImageResource(R.drawable.seedling);
+                    growingImage.setImageResource(R.drawable.seed);
                 }else if(dateCount < 21){
                     // 3 Weeks Notification
-                    growingImage.setImageResource(R.drawable.seedling);
+                    growingImage.setImageResource(R.drawable.seed);
                 }else if(dateCount < 30){
                     // 1 month Notification
-                    growingImage.setImageResource(R.drawable.seedling);
+                    growingImage.setImageResource(R.drawable.seed);
 
                 }else if(dateCount < 60){
                     // 2 month notification
-                    growingImage.setImageResource(R.drawable.seedling);
+                    growingImage.setImageResource(R.drawable.seed);
 
                 }else if(dateCount < 180){
                     // 1/2 Year Notification
-                    growingImage.setImageResource(R.drawable.seedling);
+                    growingImage.setImageResource(R.drawable.seed);
                 }
 
                 // Random tip to show at the time
