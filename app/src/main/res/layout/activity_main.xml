@@ -61,7 +61,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="Awesome text to make sure and let the person know that he is doing well"
+        android:text="Great job and keep up the great work!"
         android:id="@+id/tipText"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
@@ -70,5 +70,12 @@
         android:layout_below="@+id/growingImage"
         android:textSize="18dp"
         android:typeface="serif" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageDescription"
+        android:layout_below="@+id/growingImage"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -21,6 +21,7 @@ import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -102,24 +103,45 @@ public class main extends ActionBarActivity {
                 moneyText.setText(moneybuilder);
 
                 // Set images based on how long it has been!
+                // Sets text under the images based on how long it has been for the user
+                TextView imgDescription = (TextView) findViewById(R.id.imageDescription);
                 ImageView growingImage = (ImageView) findViewById(R.id.growingImage);
-                if(dateCount < 7){
-                    // 1 week : 7 Days Notification
+                if(dateCount < 2){
+                    // 1 Days Notification
                     growingImage.setImageResource(R.drawable.seed);
+                    growingImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "The Start is the Hardest!", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                    imgDescription.setText("Congrats: Getting Started Badge!");
+                }else if(dateCount < 7){
+                    // 1 Weeks Notification
+                    growingImage.setImageResource(R.drawable.seed);
+                    imgDescription.setText("Congrats: 1 Week Badge!");
+
                 }else if(dateCount < 21){
                     // 3 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed);
+                    imgDescription.setText("Congrats: 3 Week Badge!");
+
                 }else if(dateCount < 30){
                     // 1 month Notification
                     growingImage.setImageResource(R.drawable.seed);
+                    imgDescription.setText("Congrats: 1 Month Badge!");
 
                 }else if(dateCount < 60){
                     // 2 month notification
                     growingImage.setImageResource(R.drawable.seed);
+                    imgDescription.setText("Congrats: 1 Month Badge!");
+
 
                 }else if(dateCount < 180){
                     // 1/2 Year Notification
                     growingImage.setImageResource(R.drawable.seed);
+                    imgDescription.setText("Congrats: Half Year Badge!");
+
                 }
 
                 // Random tip to show at the time
