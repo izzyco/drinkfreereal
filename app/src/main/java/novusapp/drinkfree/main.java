@@ -128,13 +128,13 @@ public class main extends ActionBarActivity {
 
                 }else if(dateCount < 30){
                     // 1 month Notification
-                    growingImage.setImageResource(R.drawable.seed);
+                    growingImage.setImageResource(R.drawable.tree_simple);
                     imgDescription.setText("Congrats: 1 Month Badge!");
 
                 }else if(dateCount < 60){
                     // 2 month notification
-                    growingImage.setImageResource(R.drawable.seed);
-                    imgDescription.setText("Congrats: 1 Month Badge!");
+                    growingImage.setImageResource(R.drawable.tree_simple);
+                    imgDescription.setText("Congrats: 2 Month Badge!");
 
 
                 }else if(dateCount < 180){

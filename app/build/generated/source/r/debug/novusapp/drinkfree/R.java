@@ -1539,11 +1539,12 @@ containing a value of this type.
         public static final int introbutton=0x7f02003d;
         public static final int logo=0x7f02003e;
         public static final int moneyimg=0x7f02003f;
-        public static final int notification_template_icon_bg=0x7f020044;
+        public static final int notification_template_icon_bg=0x7f020045;
         public static final int novusapp=0x7f020040;
         public static final int novusapplogo=0x7f020041;
         public static final int seed=0x7f020042;
         public static final int seedling=0x7f020043;
+        public static final int tree_simple=0x7f020044;
     }
     public static final class id {
         public static final int AboutView=0x7f0b0050;
