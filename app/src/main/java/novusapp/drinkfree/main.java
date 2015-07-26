@@ -33,6 +33,7 @@ import com.firebase.client.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -73,13 +74,22 @@ public class main extends ActionBarActivity {
                 Calendar endCal = Calendar.getInstance();
                 endCal.getTime();
                 Calendar startCal = Calendar.getInstance();
-                SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.US);
+                SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
                 try {
-                    startCal.setTime(sdf.parse(dataSnapshot.child("account").child(account_id).child("startdate").getValue().toString()));
+                    String data = dataSnapshot.child("account").child(account_id).child("startdate").getValue().toString();
+                    Date date = sdf.parse(data);
+                    startCal.setTime(date);
+                    //startCal.setTime();
+                    Log.v("DiffCount", "Start Calendar Data from Firebase: " + data);
+
                 } catch (Exception e) {
                     // Can potentially catch an IO parse exception here
                     e.printStackTrace();
+                    Log.v("DiffCount", "Exception! ");
+
                 }
+
+
                 int dateCount = diffCountTime(startCal, endCal);
                 double moneyCount = dateCount * avgDrinkCostPerDay;
 
@@ -161,16 +171,19 @@ public class main extends ActionBarActivity {
 
             }
 
-            public int diffCountTime(Calendar startDate, Calendar endDate) {
-                long end = endDate.getTimeInMillis();
-                end = TimeUnit.MILLISECONDS.toDays(end);
-                long start = startDate.getTimeInMillis();
-                start = TimeUnit.MILLISECONDS.toDays(start);
-                //Log.v("DiffCount", "End: " + end + "Start: " + start + "    Computed: " + TimeUnit.MILLISECONDS.toDays(Math.abs(end - start)));
-                return (int) (end - start);
-            }
+
         });
 
+    }
+
+    public int diffCountTime(Calendar startDate, Calendar endDate) {
+        long end = endDate.getTimeInMillis();
+        end = TimeUnit.MILLISECONDS.toDays(end);
+        long start = startDate.getTimeInMillis();
+        start = TimeUnit.MILLISECONDS.toDays(start);
+        Log.v("DiffCount", "End: " + end + "Start: " + start + "    Computed: " + TimeUnit.MILLISECONDS.toDays(Math.abs(end - start)));
+        Log.v("DiffCount", "Start Calendar " + startDate.getTime().toString() + " End Calendar :" + endDate.getTime().toString());
+        return (int) (end - start);
     }
 
     @Override
