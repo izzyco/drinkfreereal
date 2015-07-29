@@ -133,7 +133,7 @@ public class main extends ActionBarActivity {
 
                 }else if(dateCount < 21){
                     // 3 Weeks Notification
-                    growingImage.setImageResource(R.drawable.seed);
+                    growingImage.setImageResource(R.drawable.seed_3weeks);
                     imgDescription.setText("Congrats: 3 Week Badge!");
 
                 }else if(dateCount < 30){
