@@ -149,7 +149,7 @@ public class main extends ActionBarActivity {
 
                 }else if(dateCount < 180){
                     // 1/2 Year Notification
-                    growingImage.setImageResource(R.drawable.seed);
+                    growingImage.setImageResource(R.drawable.tree_6months);
                     imgDescription.setText("Congrats: Half Year Badge!");
 
                 }
