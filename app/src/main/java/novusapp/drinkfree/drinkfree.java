@@ -31,6 +31,8 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.Query;
 import com.firebase.client.ValueEventListener;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.EventListener;
 
 
@@ -95,13 +97,34 @@ public class drinkfree extends Activity {
                                 //Log.v("Event", "Account ID: "+ in);
                                 //Log.v("Event", "Email: "+ dbEmail);
                                 //Log.v("Event", "Pass: "+ dbPass);
-                                if (dbEmail.equals(emailBox.getText().toString()) && dbPass.equals(passwordBox.getText().toString())) {
-                                    Log.v("login", "Login and password succeeded " + i);
-                                    myFirebaseRef.child("didlogin").child(android_id).setValue(i);
-                                    Intent mainIntent = new Intent(getApplicationContext(), main.class);
-                                    startActivity(mainIntent);
-                                    myFirebaseRef.removeEventListener(loginListener);
-                                    finish();
+
+                                if (dbEmail.equals(emailBox.getText().toString())) {
+                                    String encryptedPass = "";
+                                    try {
+                                        MessageDigest digester = java.security.MessageDigest.getInstance("MD5");
+                                        digester.update(passwordBox.getText().toString().getBytes());
+                                        byte[] hash = digester.digest();
+                                        StringBuffer hexString = new StringBuffer();
+                                        for (int o = 0; o < hash.length; o++) {
+                                            if ((0xff & hash[o]) < 0x10) {
+                                                hexString.append("0" + Integer.toHexString((0xFF & hash[o])));
+                                            }
+                                            else {
+                                                hexString.append(Integer.toHexString(0xFF & hash[o]));
+                                            }
+                                        }
+                                        encryptedPass = hexString.toString();
+                                    } catch (NoSuchAlgorithmException e) {
+                                        Log.v("ErrorRegister", "No Algorithm Exception!");
+                                    }
+                                    if(dbPass.equals(encryptedPass)) {
+                                        Log.v("login", "Login and password succeeded " + i);
+                                        myFirebaseRef.child("didlogin").child(android_id).setValue(i);
+                                        Intent mainIntent = new Intent(getApplicationContext(), main.class);
+                                        startActivity(mainIntent);
+                                        myFirebaseRef.removeEventListener(loginListener);
+                                        finish();
+                                    }
                                 } else {
                                     Log.v("Event", "Email Box: "+emailBox.getText().toString());
                                     Log.v("Event", "Password Box: " + passwordBox.getText().toString());

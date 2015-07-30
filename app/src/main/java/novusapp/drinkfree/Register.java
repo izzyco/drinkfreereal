@@ -12,8 +12,10 @@
 package novusapp.drinkfree;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,9 +29,12 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashSet;
+import java.util.UUID;
 
 public class Register extends Activity {
 
@@ -88,11 +93,37 @@ public class Register extends Activity {
                                 // Add the account to the login
                                 myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
                                 myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
-                                myFirebaseRef.child("account").child(strChildCount).child("password").setValue(passwordBox.getText().toString());
+
+                                Toast.makeText(getApplicationContext(), "Got to end of line!", Toast.LENGTH_LONG).show();
+
+                                String encryptedPass = "";
+                                try {
+                                    MessageDigest digester = java.security.MessageDigest.getInstance("MD5");
+                                    digester.update(passwordBox.getText().toString().getBytes());
+                                    byte[] hash = digester.digest();
+                                    StringBuffer hexString = new StringBuffer();
+                                    for (int i = 0; i < hash.length; i++) {
+                                        if ((0xff & hash[i]) < 0x10) {
+                                            hexString.append("0" + Integer.toHexString((0xFF & hash[i])));
+                                        }
+                                        else {
+                                            hexString.append(Integer.toHexString(0xFF & hash[i]));
+                                        }
+                                    }
+                                    encryptedPass = hexString.toString();
+                                } catch (NoSuchAlgorithmException e) {
+                                    Log.v("ErrorRegister", "No Algorithm Exception!");
+                                }
+
+                                myFirebaseRef.child("account").child(strChildCount).child("password").setValue(encryptedPass);
                                 myFirebaseRef.child("account").child(strChildCount).child("fullname").setValue(fullnameBox.getText().toString());
                                 myFirebaseRef.child("account").child(strChildCount).child("moneycount").setValue(0);
                                 myFirebaseRef.child("account").child(strChildCount).child("startdate").setValue(cal.getTime().toString());
                                 myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
+                                Intent mainIntent = new Intent(getApplicationContext(), main.class);
+                                startActivity(mainIntent);
+                                finish();
+
                             } else {
                                 emailBox.getText().clear();
                                 Toast.makeText(getApplicationContext(), "This email is already used", Toast.LENGTH_LONG).show();
@@ -118,5 +149,6 @@ public class Register extends Activity {
         });
 
     }
+
 
 }
