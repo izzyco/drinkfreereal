@@ -70,7 +70,8 @@
         android:layout_below="@+id/growingImage"
         android:textSize="18dp"
         android:typeface="serif"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -78,16 +79,5 @@
         android:id="@+id/imageDescription"
         android:layout_below="@+id/growingImage"
         android:layout_centerHorizontal="true" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_below="@+id/moneyText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="197dp"
-        android:layout_marginStart="197dp" />
 
 </RelativeLayout>
