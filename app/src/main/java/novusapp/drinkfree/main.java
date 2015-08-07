@@ -31,6 +31,8 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -105,6 +107,7 @@ public class main extends ActionBarActivity {
                 countText.setText(countBuilder);
 
                 // Creates the money saved counter, plus adds a money icon at the beginning of it
+                moneyCount = round(moneyCount, 2);
                 SpannableStringBuilder moneybuilder = new SpannableStringBuilder();
                 moneybuilder.append(" ");
                 moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
@@ -248,6 +251,15 @@ public class main extends ActionBarActivity {
         final String phone_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
         return phone_id;
+    }
+
+    //
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
 }

@@ -69,7 +69,9 @@
         android:paddingTop="50dp"
         android:layout_below="@+id/growingImage"
         android:textSize="18dp"
-        android:typeface="serif" />
+        android:typeface="serif"
+        android:textAlignment="center"
+        android:gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
