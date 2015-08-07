@@ -179,6 +179,7 @@ public class main extends ActionBarActivity {
 
     }
 
+    // Method that takes two calendar dats and returns the amount of time between them. Used to determine current count.
     public int diffCountTime(Calendar startDate, Calendar endDate) {
         long end = endDate.getTimeInMillis();
         end = TimeUnit.MILLISECONDS.toDays(end);
@@ -232,6 +233,7 @@ public class main extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // Method to reset user to zero again
     private void resetUser(){
         //Setup firebase
         Firebase.setAndroidContext(getApplicationContext());
@@ -253,10 +255,9 @@ public class main extends ActionBarActivity {
         return phone_id;
     }
 
-    //
+    //Method to round. Used for the rounding on money count
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
-
         BigDecimal bd = new BigDecimal(value);
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
