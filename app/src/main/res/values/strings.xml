@@ -16,5 +16,7 @@
     <string name="title_activity_loadingscreen">loadingscreen</string>
     <string name="title_activity_testing">testing</string>
     <string name="title_activity_about">about</string>
+    <string name="alcoholFreeText">Alcohol Free</string>
+    <string name="mainImg">11</string>
 
 </resources>
