@@ -16,9 +16,10 @@
         android:id="@+id/logo"
         android:contentDescription="@string/logo"
         android:longClickable="false"
-        android:src="@drawable/logo"
+        android:src="@drawable/logo2"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true" />
 
     <EditText
         android:layout_width="wrap_content"
