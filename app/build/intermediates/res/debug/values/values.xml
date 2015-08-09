@@ -211,10 +211,12 @@
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
+    <string name="alcoholFreeText">Alcohol Free</string>
     <string name="app_name">DrinkFree</string>
     <string name="hello_world">Hello world!</string>
     <string name="login">Login</string>
     <string name="logo">Logo</string>
+    <string name="mainImg">11</string>
     <string name="register">Register</string>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
