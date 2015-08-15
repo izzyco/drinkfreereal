@@ -132,27 +132,57 @@ public class main extends ActionBarActivity {
                 }else if(dateCount >= 7 && dateCount < 21){
                     // 1 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed);
+                    growingImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "You have made the 7 day mark!", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     imgDescription.setText("Congrats: 1 Week Badge!");
 
                 }else if(dateCount >= 21 && dateCount < 30){
                     // 3 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed_3weeks);
+                    growingImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "One week baby!", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     imgDescription.setText("Congrats: 3 Week Badge!");
 
                 }else if(dateCount >= 30 && dateCount < 60){
                     // 1 month Notification
                     growingImage.setImageResource(R.drawable.tree_simple);
+                    growingImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "6 MONTHS!", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     imgDescription.setText("Congrats: 1 Month Badge!");
 
                 }else if(dateCount >= 60 && dateCount < 180){
                     // 2 month notification
                     growingImage.setImageResource(R.drawable.tree_2months);
+                    growingImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "Half a year!", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     imgDescription.setText("Congrats: 2 Month Badge!");
 
 
                 }else if(dateCount >= 180){
                     // 1/2 Year Notification
                     growingImage.setImageResource(R.drawable.tree_6months);
+                    growingImage.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Toast.makeText(getApplicationContext(), "The Start is the Hardest!", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     imgDescription.setText("Congrats: Half Year Badge!");
 
                 }
