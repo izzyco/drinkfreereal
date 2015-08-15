@@ -42,7 +42,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class main extends ActionBarActivity {
-    static double avgDrinkCostPerDay = 3.48;
+    static double avgDrinkCostPerDay = 3.481111111111;
     ValueEventListener listener;
     String account_id;
     @Override
@@ -129,28 +129,28 @@ public class main extends ActionBarActivity {
                         }
                     });
                     imgDescription.setText("Congrats: Getting Started Badge!");
-                }else if(dateCount < 7){
+                }else if(dateCount >= 7 && dateCount < 21){
                     // 1 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed);
                     imgDescription.setText("Congrats: 1 Week Badge!");
 
-                }else if(dateCount < 21){
+                }else if(dateCount >= 21 && dateCount < 30){
                     // 3 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed_3weeks);
                     imgDescription.setText("Congrats: 3 Week Badge!");
 
-                }else if(dateCount < 30){
+                }else if(dateCount >= 30 && dateCount < 60){
                     // 1 month Notification
                     growingImage.setImageResource(R.drawable.tree_simple);
                     imgDescription.setText("Congrats: 1 Month Badge!");
 
-                }else if(dateCount < 60){
+                }else if(dateCount >= 60 && dateCount < 180){
                     // 2 month notification
                     growingImage.setImageResource(R.drawable.tree_2months);
                     imgDescription.setText("Congrats: 2 Month Badge!");
 
 
-                }else if(dateCount < 180){
+                }else if(dateCount >= 180){
                     // 1/2 Year Notification
                     growingImage.setImageResource(R.drawable.tree_6months);
                     imgDescription.setText("Congrats: Half Year Badge!");
