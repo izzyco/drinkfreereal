@@ -1554,7 +1554,7 @@ containing a value of this type.
         public static final int AboutView=0x7f0b0051;
         public static final int about_logo=0x7f0b0052;
         public static final int action0=0x7f0b006a;
-        public static final int action_about=0x7f0b0079;
+        public static final int action_about=0x7f0b0078;
         public static final int action_bar=0x7f0b0040;
         public static final int action_bar_activity_content=0x7f0b0000;
         public static final int action_bar_container=0x7f0b003f;
@@ -1569,7 +1569,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0b003d;
         public static final int action_mode_bar_stub=0x7f0b003c;
         public static final int action_mode_close_button=0x7f0b0025;
-        public static final int action_reset=0x7f0b0078;
+        public static final int action_reset=0x7f0b0079;
         public static final int action_settings=0x7f0b0077;
         public static final int activity_chooser_view_content=0x7f0b0026;
         public static final int alertTitle=0x7f0b0030;

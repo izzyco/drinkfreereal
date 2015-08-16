@@ -157,7 +157,7 @@ public class main extends ActionBarActivity {
                     growingImage.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "6 MONTHS!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "1 MONTHS!", Toast.LENGTH_LONG).show();
                         }
                     });
                     imgDescription.setText("Congrats: 1 Month Badge!");

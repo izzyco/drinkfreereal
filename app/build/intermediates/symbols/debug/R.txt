@@ -431,7 +431,7 @@ int drawable tree_simple 0x7f020048
 int id AboutView 0x7f0b0051
 int id about_logo 0x7f0b0052
 int id action0 0x7f0b006a
-int id action_about 0x7f0b0079
+int id action_about 0x7f0b0078
 int id action_bar 0x7f0b0040
 int id action_bar_activity_content 0x7f0b0000
 int id action_bar_container 0x7f0b003f
@@ -446,7 +446,7 @@ int id action_menu_presenter 0x7f0b0003
 int id action_mode_bar 0x7f0b003d
 int id action_mode_bar_stub 0x7f0b003c
 int id action_mode_close_button 0x7f0b0025
-int id action_reset 0x7f0b0078
+int id action_reset 0x7f0b0079
 int id action_settings 0x7f0b0077
 int id activity_chooser_view_content 0x7f0b0026
 int id alertTitle 0x7f0b0030
