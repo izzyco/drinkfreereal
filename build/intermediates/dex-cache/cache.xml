@@ -9,18 +9,18 @@
         <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-550f9ad4c343f5f36ea8ec35b36d623e1e58feaf.jar" />
     </item>
     <item
-        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.0/6e4e83a746e32674d29d37962ec64e01e5be9a10/firebase-client-jvm-2.3.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-fc69ac5df1e7a3d8dcb902a6170ede8e6374c797.jar" />
+        sha1="6e4e83a746e32674d29d37962ec64e01e5be9a10">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.3.0-f589fc6af4645cfda58b01042cd8835531580d9f.jar" />
     </item>
     <item
-        jar="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
         jumboMode="false"
-        revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/classes-6c64d10d985627357b8035b01caf92ddad9ebe8a.jar" />
+        revision="20.0.0"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-eee77e144ba3496b85324ebd34c71af6e5df013a.jar" />
     </item>
     <item
         jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-android/2.3.0/aa504de950abc4b000ef6b6cd127ff355d4c7cb8/firebase-client-android-2.3.0.jar"
@@ -30,9 +30,30 @@
         <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/firebase-client-android-2.3.0-21ec0075990ed2f7945839199e0bace0f75b52bb.jar" />
     </item>
     <item
-        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jar="/Users/izhang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-23310887f85582021a53e8549cd8029827dd9677.jar" />
+    </item>
+    <item
+        jar="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/classes-d0d22fadf55fc4f730ad8f034f006406a180508b.jar" />
+    </item>
+    <item
+        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
         jumboMode="false"
         revision="20.0.0"
+        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/tubesock-0.0.11-e701f84a37b4908a3c6f8d4631fdfd98a8cefab5.jar" />
+    </item>
+    <item
+        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
         sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
         <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-eee77e144ba3496b85324ebd34c71af6e5df013a.jar" />
     </item>
@@ -44,39 +65,11 @@
         <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-550f9ad4c343f5f36ea8ec35b36d623e1e58feaf.jar" />
     </item>
     <item
-        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.firebase/firebase-client-jvm/2.3.0/6e4e83a746e32674d29d37962ec64e01e5be9a10/firebase-client-jvm-2.3.0.jar"
+        jar="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="6e4e83a746e32674d29d37962ec64e01e5be9a10">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/firebase-client-jvm-2.3.0-f589fc6af4645cfda58b01042cd8835531580d9f.jar" />
-    </item>
-    <item
-        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-eee77e144ba3496b85324ebd34c71af6e5df013a.jar" />
-    </item>
-    <item
-        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-fc69ac5df1e7a3d8dcb902a6170ede8e6374c797.jar" />
-    </item>
-    <item
-        jar="/Users/izhang/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-23310887f85582021a53e8549cd8029827dd9677.jar" />
-    </item>
-    <item
-        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/tubesock-0.0.11-e701f84a37b4908a3c6f8d4631fdfd98a8cefab5.jar" />
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/classes-6c64d10d985627357b8035b01caf92ddad9ebe8a.jar" />
     </item>
     <item
         jar="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
@@ -86,18 +79,25 @@
         <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-db1a305796096ea1774f9573c9b9a5835a532d12.jar" />
     </item>
     <item
+        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-fc69ac5df1e7a3d8dcb902a6170ede8e6374c797.jar" />
+    </item>
+    <item
+        jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-fc69ac5df1e7a3d8dcb902a6170ede8e6374c797.jar" />
+    </item>
+    <item
         jar="/Users/izhang/.gradle/caches/modules-2/files-2.1/com.firebase/tubesock/0.0.11/d37cb67277928cf59344b4196af8d9cee1f1a27c/tubesock-0.0.11.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="d37cb67277928cf59344b4196af8d9cee1f1a27c">
         <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/tubesock-0.0.11-e701f84a37b4908a3c6f8d4631fdfd98a8cefab5.jar" />
-    </item>
-    <item
-        jar="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/izhang/Desktop/Programming Work/DrinkFree/app/build/intermediates/pre-dexed/debug/classes-d0d22fadf55fc4f730ad8f034f006406a180508b.jar" />
     </item>
 
 </items>

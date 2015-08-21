@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="novusapp.drinkfree.main" >
+    <item android:id="@+id/action_about"
+        android:title="about"
+        android:orderInCategory="100"
+        />
+    <item android:id="@+id/action_reset"
+        android:title="reset"
+        android:orderInCategory="100"
+        />
+</menu>
+<!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/menu/main.xml -->

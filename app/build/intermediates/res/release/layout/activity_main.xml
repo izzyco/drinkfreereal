@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="novusapp.drinkfree.main"
+    android:background="@color/bluegreen"
+    android:id="@+id/ee">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/name"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/alcoholFreeText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Money Saved"
+        android:id="@+id/moneyText"
+        android:phoneNumber="false"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:elegantTextHeight="true"
+        android:layout_below="@+id/dateText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Date Counter"
+        android:id="@+id/dateText"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/growingImage"
+        android:src="@drawable/seed"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxHeight="140dp"
+        android:maxWidth="140dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="false" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Great job and keep up the great work!"
+        android:id="@+id/tipText"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="50dp"
+        android:layout_below="@+id/growingImage"
+        android:textSize="18sp"
+        android:typeface="serif"
+        android:textAlignment="center"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageDescription"
+        android:layout_below="@+id/growingImage"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+<!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/layout/activity_main.xml -->
