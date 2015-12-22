@@ -4,7 +4,6 @@
     Author : Ivan Zhang
     Company : Novusapp.com
 
-    TODO: 1) Add images based on different sets of days they have been alcohol free
 
  */
 
@@ -43,6 +42,14 @@ import java.util.concurrent.TimeUnit;
 
 public class main extends ActionBarActivity {
     static double avgDrinkCostPerDay = 3.481111111111;
+    static String DIDLOGIN = "didlogin";
+    static String DATE_FORMAT = "EEE MMM dd HH:mm:ss z yyyy";
+    static String FULL_NAME = "fullname";
+    static String ACCOUNT = "account";
+    static String START_DATE = "startdate";
+    static String MONEY_COUNT = "moneycount";
+
+
     ValueEventListener listener;
     String account_id;
     @Override
@@ -65,20 +72,19 @@ public class main extends ActionBarActivity {
         myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                account_id = dataSnapshot.child("didlogin").child(phone_id).getValue().toString();
-                Log.v("Account ID", account_id);
+                account_id = dataSnapshot.child(DIDLOGIN).child(phone_id).getValue().toString();
                 String account_name = "DrinkFree User";
-                if (dataSnapshot.child("account").child(account_id).child("fullname").getValue() != null) {
-                    account_name = dataSnapshot.child("account").child(account_id).child("fullname").getValue().toString();
+                if (dataSnapshot.child(ACCOUNT).child(account_id).child(FULL_NAME).getValue() != null) {
+                    account_name = dataSnapshot.child(ACCOUNT).child(account_id).child(FULL_NAME).getValue().toString();
                 }
 
                 // Creates the initial calendar instance to determine the count of the account
                 Calendar endCal = Calendar.getInstance();
                 endCal.getTime();
                 Calendar startCal = Calendar.getInstance();
-                SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy", Locale.ENGLISH);
+                SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT, Locale.ENGLISH);
                 try {
-                    String data = dataSnapshot.child("account").child(account_id).child("startdate").getValue().toString();
+                    String data = dataSnapshot.child(ACCOUNT).child(account_id).child(START_DATE).getValue().toString();
                     Date date = sdf.parse(data);
                     startCal.setTime(date);
                     //startCal.setTime();
@@ -272,10 +278,10 @@ public class main extends ActionBarActivity {
         //Get calender time
         final Calendar cal = Calendar.getInstance();
         cal.getTime();
-        final SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
+        final SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
 
-        myFirebaseRef.child("account").child(account_id).child("moneycount").setValue(0);
-        myFirebaseRef.child("account").child(account_id).child("startdate").setValue(cal.getTime().toString());
+        myFirebaseRef.child(ACCOUNT).child(account_id).child(MONEY_COUNT).setValue(0);
+        myFirebaseRef.child(ACCOUNT).child(account_id).child(START_DATE).setValue(cal.getTime().toString());
     }
 
     private String getPhoneId(){
