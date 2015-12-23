@@ -38,13 +38,25 @@ import java.util.UUID;
 
 public class Register extends Activity {
 
+    static final String FIREBASE_REF = "https://drinkfreeapp.firebaseio.com/";
+    static final String ACCOUNT = "account";
+    static final String EMAIL = "email";
+    static final String PASSWORD = "password";
+    static final String DID_LOGIN = "didlogin";
+    static final String USER_NAME = "username";
+    static final String FULL_NAME = "fullname";
+    static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    static final String MONEY_COUNT = "moneycount";
+    static final String START_DATE = "startdate";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         // Setup Firebase
         Firebase.setAndroidContext(getApplicationContext());
-        final Firebase myFirebaseRef = new Firebase("https://drinkfreeapp.firebaseio.com/");
+        final Firebase myFirebaseRef = new Firebase(FIREBASE_REF);
 
         final EditText usernameBox = (EditText) this.findViewById(R.id.username);
         final EditText emailBox = (EditText) this.findViewById(R.id.emailTI);
@@ -58,8 +70,7 @@ public class Register extends Activity {
 
         final Calendar cal = Calendar.getInstance();
         cal.getTime();
-        final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
+        final SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
         // Add listener to add new login for a person. Save the data.
         myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -75,14 +86,14 @@ public class Register extends Activity {
                             Toast.makeText(getApplicationContext(), "Please fill in all of the boxes", Toast.LENGTH_LONG).show();
                         } else {
 
-                            int childCount = (int) dataSnapshot.child("account").getChildrenCount();
+                            int childCount = (int) dataSnapshot.child(ACCOUNT).getChildrenCount();
                             childCount++;
                             String strChildCount = Integer.toString(childCount);
 
                             boolean hasEmail = false;
                             for (int i = 0; i <= childCount; i++) {
-                                if (dataSnapshot.child("account").child(Integer.toString(i)).child("email").exists()) {
-                                    if (dataSnapshot.child("account").child(Integer.toString(i)).child("email").getValue().toString().contentEquals(emailBox.getText().toString())) {
+                                if (dataSnapshot.child(ACCOUNT).child(Integer.toString(i)).child(EMAIL).exists()) {
+                                    if (dataSnapshot.child(ACCOUNT).child(Integer.toString(i)).child(EMAIL).getValue().toString().contentEquals(emailBox.getText().toString())) {
                                         hasEmail = true;
                                         break;
                                     }
@@ -91,8 +102,8 @@ public class Register extends Activity {
 
                             if (!hasEmail) {
                                 // Add the account to the login
-                                myFirebaseRef.child("account").child(strChildCount).child("email").setValue(emailBox.getText().toString());
-                                myFirebaseRef.child("account").child(strChildCount).child("username").setValue(usernameBox.getText().toString());
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(EMAIL).setValue(emailBox.getText().toString());
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(USER_NAME).setValue(usernameBox.getText().toString());
 
                                 Toast.makeText(getApplicationContext(), "Got to end of line!", Toast.LENGTH_LONG).show();
 
@@ -115,11 +126,11 @@ public class Register extends Activity {
                                     Log.v("ErrorRegister", "No Algorithm Exception!");
                                 }
 
-                                myFirebaseRef.child("account").child(strChildCount).child("password").setValue(encryptedPass);
-                                myFirebaseRef.child("account").child(strChildCount).child("fullname").setValue(fullnameBox.getText().toString());
-                                myFirebaseRef.child("account").child(strChildCount).child("moneycount").setValue(0);
-                                myFirebaseRef.child("account").child(strChildCount).child("startdate").setValue(cal.getTime().toString());
-                                myFirebaseRef.child("didlogin").child(android_id).setValue(childCount);
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(PASSWORD).setValue(encryptedPass);
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(FULL_NAME).setValue(fullnameBox.getText().toString());
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(MONEY_COUNT).setValue(0);
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(START_DATE).setValue(cal.getTime().toString());
+                                myFirebaseRef.child(DID_LOGIN).child(android_id).setValue(childCount);
                                 Intent mainIntent = new Intent(getApplicationContext(), main.class);
                                 startActivity(mainIntent);
                                 finish();
