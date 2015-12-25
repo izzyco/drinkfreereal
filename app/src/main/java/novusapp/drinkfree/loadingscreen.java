@@ -58,13 +58,12 @@ public class loadingscreen extends Activity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.child(android_id).exists()) {
-                        Toast.makeText(getApplicationContext(), "You are all set to go.", Toast.LENGTH_LONG).show();
                         Intent mainIntent = new Intent(getApplicationContext(), main.class);
                         startActivity(mainIntent);
                         finish();
                     } else {
-                        Intent loginIntent = new Intent(getApplicationContext(), drinkfree.class);
-                        startActivity(loginIntent);
+                        Intent regIntent = new Intent(getApplicationContext(), Register.class);
+                        startActivity(regIntent);
                         finish();
                     }
                 }
