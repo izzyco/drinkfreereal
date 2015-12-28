@@ -30,10 +30,11 @@
         android:id="@+id/username"
         android:layout_marginTop="63dp"
         android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
         android:focusable="true"
         android:hint="username"
-        android:elevation="5dp"/>
+        android:elevation="5dp"
+        android:layout_alignEnd="@+id/nameTI"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -42,10 +43,11 @@
         android:ems="10"
         android:id="@+id/emailTI"
         android:layout_below="@+id/username"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:hint="email"
-        android:elevation="5dp"/>
+        android:elevation="5dp"
+        android:layout_alignEnd="@+id/username"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -58,23 +60,24 @@
         android:layout_alignStart="@+id/emailTI"
         android:layout_marginTop="10dp"
         android:hint="password"
-        android:elevation="5dp"/>
+        android:elevation="5dp"
+        android:layout_alignEnd="@+id/emailTI" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sign Me Up!"
         android:id="@+id/registerButton"
-        android:layout_marginTop="49dp"
-        android:layout_below="@+id/passwordTI"
         android:elevation="5dp"
-        android:layout_alignEnd="@+id/passwordTI"
-        android:layout_alignStart="@+id/passwordTI"
         android:nestedScrollingEnabled="true"
         android:background="@color/greygreen"
         android:paddingTop="13dp"
         android:paddingBottom="13dp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_below="@+id/sobrietyDate"
+        android:layout_alignEnd="@+id/sobrietyDate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -83,10 +86,10 @@
         android:ems="10"
         android:id="@+id/nameTI"
         android:layout_below="@+id/name"
-        android:layout_alignLeft="@+id/username"
-        android:layout_alignStart="@+id/username"
         android:layout_marginTop="10dp"
-        android:hint="full name" />
+        android:hint="full name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -97,5 +100,33 @@
         android:maxWidth="160dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/sobrietyDate"
+        android:layout_below="@+id/passwordTI"
+        android:layout_alignStart="@+id/passwordTI"
+        android:layout_alignEnd="@+id/passwordTI"
+        android:hint="Date of sobriety"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginButtonRegister"
+        android:elevation="5dp"
+        android:nestedScrollingEnabled="true"
+        android:background="@color/greygreen"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/registerButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/registerButton"
+        android:layout_marginTop="5dp" />
 
 </RelativeLayout>

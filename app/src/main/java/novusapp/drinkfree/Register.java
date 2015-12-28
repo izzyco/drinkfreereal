@@ -36,6 +36,8 @@ import java.util.Calendar;
 import java.util.HashSet;
 import java.util.UUID;
 
+import javax.microedition.khronos.egl.EGLDisplay;
+
 public class Register extends Activity {
 
     static final String FIREBASE_REF = "https://drinkfreeapp.firebaseio.com/";
@@ -63,6 +65,8 @@ public class Register extends Activity {
         final EditText passwordBox = (EditText) this.findViewById(R.id.passwordTI);
         final EditText fullnameBox = (EditText) this.findViewById(R.id.nameTI);
         final Button signup = (Button) this.findViewById(R.id.registerButton);
+        final Button login = (Button) this.findViewById(R.id.loginButtonRegister);
+        final EditText sobrietyDate = (EditText) this.findViewById(R.id.sobrietyDate);
 
 
         final String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
@@ -116,8 +120,7 @@ public class Register extends Activity {
                                     for (int i = 0; i < hash.length; i++) {
                                         if ((0xff & hash[i]) < 0x10) {
                                             hexString.append("0" + Integer.toHexString((0xFF & hash[i])));
-                                        }
-                                        else {
+                                        } else {
                                             hexString.append(Integer.toHexString(0xFF & hash[i]));
                                         }
                                     }
@@ -147,6 +150,15 @@ public class Register extends Activity {
             @Override
             public void onCancelled(FirebaseError firebaseError) {
 
+            }
+        });
+
+        // Login button, brings the user to the login activity
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent loginActivity = new Intent(getApplicationContext(), drinkfree.class);
+                startActivity(loginActivity);
             }
         });
 
