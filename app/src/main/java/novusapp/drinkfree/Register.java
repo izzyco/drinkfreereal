@@ -57,6 +57,9 @@ public class Register extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+
         // Setup Firebase
         Firebase.setAndroidContext(getApplicationContext());
         final Firebase myFirebaseRef = new Firebase(FIREBASE_REF);
