@@ -43,8 +43,8 @@
         <activity
             android:name=".about"
             android:label="@string/title_activity_about"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
     </application>
 
