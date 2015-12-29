@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:text="Register"
         android:id="@+id/name"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         style="@style/AppTheme"
         android:textSize="34dp"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="10dp" />
+        android:textColor="@color/whiteopac"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,12 +27,15 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/username"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="70dp"
         android:layout_below="@+id/name"
         android:focusable="true"
         android:hint="username"
         android:layout_alignEnd="@+id/nameTI"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/whiteopac"
+        android:textColor="@color/greygreenopac"
+        android:textColorHint="@color/greygreenopac" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -44,7 +47,12 @@
         android:layout_marginTop="10dp"
         android:hint="email"
         android:layout_alignEnd="@+id/username"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/whiteopac"
+        android:focusable="true"
+        android:textColor="@color/greygreenopac"
+        android:textIsSelectable="false"
+        android:textColorHint="@color/greygreenopac" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -57,7 +65,11 @@
         android:layout_alignStart="@+id/emailTI"
         android:layout_marginTop="10dp"
         android:hint="password"
-        android:layout_alignEnd="@+id/emailTI" />
+        android:layout_alignEnd="@+id/emailTI"
+        android:backgroundTint="@color/whiteopac"
+        android:focusable="true"
+        android:textColor="@color/greygreenopac"
+        android:textColorHint="@color/greygreenopac" />
 
     <Button
         android:layout_width="wrap_content"
@@ -65,14 +77,15 @@
         android:text="Sign Me Up!"
         android:id="@+id/registerButton"
         android:nestedScrollingEnabled="true"
-        android:background="@color/greygreen"
-        android:paddingTop="13dp"
-        android:paddingBottom="13dp"
+        android:background="@color/greygreenopac"
         android:textColor="#ffffff"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/passwordTI"
-        android:layout_alignEnd="@+id/passwordTI" />
+        android:layout_alignEnd="@+id/passwordTI"
+        android:textSize="18dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -84,7 +97,11 @@
         android:layout_marginTop="10dp"
         android:hint="full name"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@color/whiteopac"
+        android:focusable="true"
+        android:textColor="@color/greygreenopac"
+        android:textColorHint="@color/greygreenopac" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -102,13 +119,14 @@
         android:text="Login"
         android:id="@+id/loginButtonRegister"
         android:nestedScrollingEnabled="true"
-        android:background="@color/greygreen"
-        android:paddingTop="13dp"
-        android:paddingBottom="13dp"
+        android:background="@color/greygreenopac"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:textColor="#ffffff"
         android:layout_below="@+id/registerButton"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/registerButton"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:textSize="18dp" />
 
 </RelativeLayout>
