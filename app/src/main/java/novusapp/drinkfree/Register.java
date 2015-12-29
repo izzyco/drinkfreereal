@@ -50,6 +50,7 @@ public class Register extends Activity {
     static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
     static final String MONEY_COUNT = "moneycount";
     static final String START_DATE = "startdate";
+    static final long BUTTON_PRESSED_STATE = 8;
 
 
     @Override
