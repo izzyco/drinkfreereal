@@ -27,11 +27,13 @@
         android:inputType="text"
         android:ems="10"
         android:id="@+id/emailBox"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
         android:layout_below="@+id/logo"
         android:hint="Username (Email)"
-        android:elevation="5dp"/>
+        android:layout_alignEnd="@+id/logo"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/whiteopac" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,12 +42,15 @@
         android:ems="10"
         android:id="@+id/passwordBox"
         android:hint="password"
-        android:elevation="5dp"
         android:layout_below="@+id/emailBox"
         android:layout_alignLeft="@+id/emailBox"
         android:layout_alignStart="@+id/emailBox"
         android:paddingTop="10dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_alignEnd="@+id/emailBox"
+        android:backgroundTint="@color/whiteopac"
+        android:focusable="true"
+        android:enabled="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -55,14 +60,14 @@
         android:layout_below="@+id/passwordBox"
         android:layout_marginTop="52dp"
         android:theme="@style/Base.Widget.AppCompat.Button.Small"
-        android:elevation="10dp"
         android:layout_alignStart="@+id/passwordBox"
-        android:background="@color/greygreen"
+        android:background="@color/greygreenopac"
         android:textColor="#ffffff"
         android:layout_alignRight="@+id/passwordBox"
         android:layout_alignEnd="@+id/passwordBox"
         android:layout_alignParentStart="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:alpha="10" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -73,14 +78,14 @@
         android:layout_below="@+id/loginButton"
         android:layout_alignEnd="@+id/loginButton"
         android:layout_alignStart="@+id/loginButton"
-        android:background="@color/greygreen"
+        android:background="@color/greygreenopac"
         android:layout_marginTop="10dp"
         android:paddingTop="13dp"
         android:paddingBottom="13dp"
         android:textColor="#ffffff"
         android:focusable="false"
-        android:elevation="10dp"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:alpha="10" />
 
     <ImageView
         android:layout_width="wrap_content"
