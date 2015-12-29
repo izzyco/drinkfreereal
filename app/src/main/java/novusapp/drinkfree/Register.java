@@ -67,7 +67,6 @@ public class Register extends Activity {
         final EditText fullnameBox = (EditText) this.findViewById(R.id.nameTI);
         final Button signup = (Button) this.findViewById(R.id.registerButton);
         final Button login = (Button) this.findViewById(R.id.loginButtonRegister);
-        final EditText sobrietyDate = (EditText) this.findViewById(R.id.sobrietyDate);
 
 
         final String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
