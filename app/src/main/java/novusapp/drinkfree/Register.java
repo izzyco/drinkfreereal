@@ -12,17 +12,21 @@
 package novusapp.drinkfree;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -33,6 +37,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.UUID;
 
@@ -47,18 +52,20 @@ public class Register extends Activity {
     static final String DID_LOGIN = "didlogin";
     static final String USER_NAME = "username";
     static final String FULL_NAME = "fullname";
-    static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    static final String DATE_FORMAT = "EEE MMM dd HH:mm:ss z yyyy";
     static final String MONEY_COUNT = "moneycount";
     static final String START_DATE = "startdate";
     static final long BUTTON_PRESSED_STATE = 8;
 
+    private SimpleDateFormat sdf;
+
+    private DatePickerDialog sobrietyDatePicker;
+    private EditText sobrietyDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-
 
         // Setup Firebase
         Firebase.setAndroidContext(getApplicationContext());
@@ -72,12 +79,23 @@ public class Register extends Activity {
         final Button login = (Button) this.findViewById(R.id.loginButtonRegister);
 
 
+        sobrietyDate = (EditText) this.findViewById(R.id.dateTI);
+        sobrietyDate.setInputType(InputType.TYPE_NULL);
+        sobrietyDate.requestFocus();
+        sobrietyDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setDateTimeField();
+                sobrietyDatePicker.show();
+            }
+        });
+
         final String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
 
         final Calendar cal = Calendar.getInstance();
         cal.getTime();
-        final SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
+        sdf = new SimpleDateFormat(DATE_FORMAT);
         // Add listener to add new login for a person. Save the data.
         myFirebaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -135,7 +153,7 @@ public class Register extends Activity {
                                 myFirebaseRef.child(ACCOUNT).child(strChildCount).child(PASSWORD).setValue(encryptedPass);
                                 myFirebaseRef.child(ACCOUNT).child(strChildCount).child(FULL_NAME).setValue(fullnameBox.getText().toString());
                                 myFirebaseRef.child(ACCOUNT).child(strChildCount).child(MONEY_COUNT).setValue(0);
-                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(START_DATE).setValue(cal.getTime().toString());
+                                myFirebaseRef.child(ACCOUNT).child(strChildCount).child(START_DATE).setValue(sobrietyDate.getText().toString());
                                 myFirebaseRef.child(DID_LOGIN).child(android_id).setValue(childCount);
                                 Intent mainIntent = new Intent(getApplicationContext(), main.class);
                                 startActivity(mainIntent);
@@ -176,5 +194,15 @@ public class Register extends Activity {
 
     }
 
+    private void setDateTimeField() {
+        Calendar newCalendar = Calendar.getInstance();
+        sobrietyDatePicker = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                Calendar newDate = Calendar.getInstance();
+                newDate.set(year, monthOfYear, dayOfMonth);
+                sobrietyDate.setText(sdf.format(newDate.getTime()));
+            }
 
+        }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
+    }
 }

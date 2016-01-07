@@ -27,15 +27,14 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/username"
-        android:layout_marginTop="70dp"
-        android:layout_below="@+id/name"
         android:focusable="true"
         android:hint="username"
-        android:layout_alignEnd="@+id/nameTI"
-        android:layout_alignParentStart="true"
         android:backgroundTint="@color/whiteopac"
         android:textColor="@color/greygreenopac"
-        android:textColorHint="@color/greygreenopac" />
+        android:textColorHint="@color/greygreenopac"
+        android:layout_below="@+id/nameTI"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/nameTI" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -43,16 +42,15 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/emailTI"
-        android:layout_below="@+id/username"
-        android:layout_marginTop="10dp"
         android:hint="email"
-        android:layout_alignEnd="@+id/username"
-        android:layout_alignParentStart="true"
         android:backgroundTint="@color/whiteopac"
         android:focusable="true"
         android:textColor="@color/greygreenopac"
         android:textIsSelectable="false"
-        android:textColorHint="@color/greygreenopac" />
+        android:textColorHint="@color/greygreenopac"
+        android:layout_below="@+id/username"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/username" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -60,16 +58,14 @@
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/passwordTI"
-        android:layout_below="@+id/emailTI"
-        android:layout_alignLeft="@+id/emailTI"
-        android:layout_alignStart="@+id/emailTI"
-        android:layout_marginTop="10dp"
         android:hint="password"
-        android:layout_alignEnd="@+id/emailTI"
         android:backgroundTint="@color/whiteopac"
         android:focusable="true"
         android:textColor="@color/greygreenopac"
-        android:textColorHint="@color/greygreenopac" />
+        android:textColorHint="@color/greygreenopac"
+        android:layout_below="@+id/emailTI"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/emailTI" />
 
     <Button
         android:layout_width="wrap_content"
@@ -79,13 +75,13 @@
         android:nestedScrollingEnabled="true"
         android:background="@color/greygreenopac"
         android:textColor="#ffffff"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/passwordTI"
-        android:layout_alignEnd="@+id/passwordTI"
+        android:layout_marginTop="15dp"
         android:textSize="18dp"
         android:paddingTop="15dp"
-        android:paddingBottom="15dp" />
+        android:paddingBottom="15dp"
+        android:layout_below="@+id/dateTI"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/dateTI" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -123,10 +119,26 @@
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:textColor="#ffffff"
-        android:layout_below="@+id/registerButton"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/registerButton"
-        android:layout_marginTop="5dp"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:layout_below="@+id/registerButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/dateTI"
+        android:hint="sobriety date"
+        android:backgroundTint="@color/whiteopac"
+        android:focusable="true"
+        android:textColor="@color/greygreenopac"
+        android:textColorHint="@color/greygreenopac"
+        android:layout_below="@+id/passwordTI"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/passwordTI" />
 
 </RelativeLayout>

@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'DrinkFreeKey'
-            keyPassword 'zhang123'
-            storeFile file('/Users/izhang/drinkfree.jks')
-            storePassword 'zhang123'
-        }
-    }
     compileSdkVersion 21
     buildToolsVersion "22.0.1"
     defaultConfig {
@@ -23,11 +15,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             zipAlignEnabled true
-            signingConfig signingConfigs.config
         }
         debug {
             zipAlignEnabled true
-            signingConfig signingConfigs.config
         }
     }
     packagingOptions {

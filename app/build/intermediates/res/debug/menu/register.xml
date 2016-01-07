@@ -5,5 +5,10 @@
         android:title="@string/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/abc_ic_ab_back_mtrl_am_alpha"
+        android:title="Login"
+        />
 </menu>
 <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/menu/register.xml -->

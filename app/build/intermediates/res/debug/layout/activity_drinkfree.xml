@@ -10,28 +10,20 @@
     android:background="@color/bluegreen"
     android:id="@+id/relativelayout">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/logo"
-        android:contentDescription="@string/logo"
-        android:longClickable="false"
-        android:src="@drawable/logo2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:adjustViewBounds="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
         android:id="@+id/emailBox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:layout_below="@+id/logo"
         android:hint="Username (Email)"
-        android:elevation="5dp"/>
+        android:backgroundTint="@color/whiteopac"
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/greygreenopac"
+        android:textColorHint="@color/greygreenopac" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,12 +32,19 @@
         android:ems="10"
         android:id="@+id/passwordBox"
         android:hint="password"
-        android:elevation="5dp"
         android:layout_below="@+id/emailBox"
         android:layout_alignLeft="@+id/emailBox"
         android:layout_alignStart="@+id/emailBox"
         android:paddingTop="10dp"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:layout_alignEnd="@+id/emailBox"
+        android:backgroundTint="@color/whiteopac"
+        android:focusable="true"
+        android:enabled="true"
+        android:layout_marginTop="5dp"
+        android:textColorLink="@color/greygreenopac"
+        android:textColor="@color/greygreenopac"
+        android:textColorHint="@color/greygreenopac" />
 
     <Button
         android:layout_width="wrap_content"
@@ -53,16 +52,16 @@
         android:text="@string/login"
         android:id="@+id/loginButton"
         android:layout_below="@+id/passwordBox"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="45dp"
         android:theme="@style/Base.Widget.AppCompat.Button.Small"
-        android:elevation="10dp"
         android:layout_alignStart="@+id/passwordBox"
-        android:background="@color/greygreen"
+        android:background="@color/greygreenopac"
         android:textColor="#ffffff"
         android:layout_alignRight="@+id/passwordBox"
         android:layout_alignEnd="@+id/passwordBox"
         android:layout_alignParentStart="false"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:alpha="10" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -73,14 +72,14 @@
         android:layout_below="@+id/loginButton"
         android:layout_alignEnd="@+id/loginButton"
         android:layout_alignStart="@+id/loginButton"
-        android:background="@color/greygreen"
+        android:background="@color/greygreenopac"
         android:layout_marginTop="10dp"
         android:paddingTop="13dp"
         android:paddingBottom="13dp"
         android:textColor="#ffffff"
         android:focusable="false"
-        android:elevation="10dp"
-        android:textSize="18dp" />
+        android:textSize="18dp"
+        android:alpha="10" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -91,6 +90,18 @@
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        style="@style/AppTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/textView3"
+        android:textSize="34dp"
+        android:textColor="@color/whiteopac"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
