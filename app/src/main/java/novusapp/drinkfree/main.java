@@ -10,17 +10,23 @@
 package novusapp.drinkfree;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
 import android.text.SpannableStringBuilder;
 import android.text.style.ImageSpan;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,7 +54,9 @@ public class main extends ActionBarActivity {
     static String ACCOUNT = "account";
     static String START_DATE = "startdate";
     static String MONEY_COUNT = "moneycount";
-
+    static String SPONSORCALL_REF = "sponsorcall_ref";
+    static String PREF_FILE = "pref_file";
+    Context context;
 
     ValueEventListener listener;
     String account_id;
@@ -56,6 +64,7 @@ public class main extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this;
 
         //Setup firebase
         Firebase.setAndroidContext(getApplicationContext());
@@ -128,7 +137,7 @@ public class main extends ActionBarActivity {
                 // Sets text under the images based on how long it has been for the user
                 TextView imgDescription = (TextView) findViewById(R.id.imageDescription);
                 ImageView growingImage = (ImageView) findViewById(R.id.growingImage);
-                if(dateCount < 2){
+                if (dateCount < 2) {
                     // 1 Days Notification
                     growingImage.setImageResource(R.drawable.seed);
                     growingImage.setOnClickListener(new View.OnClickListener() {
@@ -138,7 +147,7 @@ public class main extends ActionBarActivity {
                         }
                     });
                     imgDescription.setText("Congrats: Getting Started Badge!");
-                }else if(dateCount >= 7 && dateCount < 21){
+                } else if (dateCount >= 7 && dateCount < 21) {
                     // 1 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed);
                     growingImage.setOnClickListener(new View.OnClickListener() {
@@ -149,7 +158,7 @@ public class main extends ActionBarActivity {
                     });
                     imgDescription.setText("Congrats: 1 Week Badge!");
 
-                }else if(dateCount >= 21 && dateCount < 30){
+                } else if (dateCount >= 21 && dateCount < 30) {
                     // 3 Weeks Notification
                     growingImage.setImageResource(R.drawable.seed_3weeks);
                     growingImage.setOnClickListener(new View.OnClickListener() {
@@ -160,7 +169,7 @@ public class main extends ActionBarActivity {
                     });
                     imgDescription.setText("Congrats: 3 Week Badge!");
 
-                }else if(dateCount >= 30 && dateCount < 60){
+                } else if (dateCount >= 30 && dateCount < 60) {
                     // 1 month Notification
                     growingImage.setImageResource(R.drawable.tree_simple);
                     growingImage.setOnClickListener(new View.OnClickListener() {
@@ -171,7 +180,7 @@ public class main extends ActionBarActivity {
                     });
                     imgDescription.setText("Congrats: 1 Month Badge!");
 
-                }else if(dateCount >= 60 && dateCount < 180){
+                } else if (dateCount >= 60 && dateCount < 180) {
                     // 2 month notification
                     growingImage.setImageResource(R.drawable.tree_2months);
                     growingImage.setOnClickListener(new View.OnClickListener() {
@@ -183,7 +192,7 @@ public class main extends ActionBarActivity {
                     imgDescription.setText("Congrats: 2 Month Badge!");
 
 
-                }else if(dateCount >= 180){
+                } else if (dateCount >= 180) {
                     // 1/2 Year Notification
                     growingImage.setImageResource(R.drawable.tree_6months);
                     growingImage.setOnClickListener(new View.OnClickListener() {
@@ -267,6 +276,18 @@ public class main extends ActionBarActivity {
         }else if(id == R.id.action_about){
             Intent mainIntent = new Intent(getApplicationContext(), about.class);
             startActivity(mainIntent);
+        }else if(id == R.id.action_sponsor){
+            SharedPreferences prefs = getSharedPreferences(PREF_FILE, MODE_PRIVATE);
+            String sponsorPhoneNumber = prefs.getString(SPONSORCALL_REF, null);
+            if(sponsorPhoneNumber == null){
+                addSponsorNumberAction();
+            }else{
+                String phoneNumber = "tel:" + sponsorPhoneNumber;
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(phoneNumber));
+                startActivity(intent);
+            }
+        }else if(id == R.id.action_changeSponsor){
+            addSponsorNumberAction();
         }
 
         return super.onOptionsItemSelected(item);
@@ -300,6 +321,35 @@ public class main extends ActionBarActivity {
         BigDecimal bd = new BigDecimal(value);
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
+    }
+
+    private void addSponsorNumberAction(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialogView = inflater.inflate(R.layout.dialogalert_sponsornumber, null);
+        alert.setView(dialogView);
+
+        final EditText sponsorInput = (EditText) dialogView.findViewById(R.id.numberBox);
+        alert.setTitle("Please add your sponsors number");
+
+        alert.setPositiveButton("Yes, Add Sponsor", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                //Your action here
+                String sponsornumber = sponsorInput.getText().toString();
+                SharedPreferences.Editor editor = getSharedPreferences(PREF_FILE, MODE_PRIVATE).edit();
+                editor.putString(SPONSORCALL_REF, sponsornumber);
+                editor.commit();
+            }
+        });
+
+        alert.setNegativeButton("No, Cancel",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                    }
+                });
+
+        alert.show();
     }
 
 }

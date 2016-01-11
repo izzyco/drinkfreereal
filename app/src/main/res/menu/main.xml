@@ -1,12 +1,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="novusapp.drinkfree.main" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="novusapp.drinkfree.main">
+    <item
+        android:id="@+id/action_sponsor"
+        android:title="Call Sponsor"
+        app:showAsAction="ifRoom"
+        />
+
     <item android:id="@+id/action_about"
         android:title="about"
         android:orderInCategory="100"
+        app:showAsAction="never"
         />
     <item android:id="@+id/action_reset"
         android:title="reset"
         android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_changeSponsor"
+        android:title="edit sponsor number"
+        android:orderInCategory="100"
+        app:showAsAction="never"
         />
 </menu>
