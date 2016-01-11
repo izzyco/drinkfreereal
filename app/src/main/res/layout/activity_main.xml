@@ -110,15 +110,14 @@
         android:layout_height="fill_parent"
         android:text="Great job and keep up the great work!"
         android:id="@+id/tipText"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:paddingTop="40dp"
+        android:paddingTop="30dp"
         android:layout_below="@+id/growingImage"
         android:textSize="18sp"
         android:typeface="serif"
         android:textAlignment="center"
-        android:gravity="center"/>
+        android:gravity="center" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -126,5 +125,6 @@
         android:id="@+id/imageDescription"
         android:layout_below="@+id/growingImage"
         android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
