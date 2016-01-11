@@ -105,21 +105,24 @@ public class main extends ActionBarActivity {
                 nameText.setText("Welcome, " + account_name);
 
                 // Creates date counter for the user and adds a calendar to the beginning of it
-                SpannableStringBuilder countBuilder = new SpannableStringBuilder();
-                countBuilder.append(" ");
-                countBuilder.setSpan(new ImageSpan(getApplication(), R.drawable.calendarimg),
-                        countBuilder.length() - 1, countBuilder.length(), 0);
-                countBuilder.append("  Date Counter: " + Integer.toString(dateCount) + " Days");
-                countText.setText(countBuilder);
+//                SpannableStringBuilder countBuilder = new SpannableStringBuilder();
+//                countBuilder.append(" ");
+//                countBuilder.setSpan(new ImageSpan(getApplication(), R.drawable.calendarimg),
+//                        countBuilder.length() - 1, countBuilder.length(), 0);
+//                countBuilder.append("  Date Counter: " + Integer.toString(dateCount) + " Days");
+//                countText.setText(countBuilder);
+
+                countText.setText(" Date Counter: " + Integer.toString(dateCount) + " Days");
 
                 // Creates the money saved counter, plus adds a money icon at the beginning of it
+
+//                SpannableStringBuilder moneybuilder = new SpannableStringBuilder();
+//                moneybuilder.append(" ");
+//                moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
+//                        moneybuilder.length() - 1, moneybuilder.length(), 0);
+//                moneybuilder.append("  Money Saved: $" + Double.toString(moneyCount));
                 moneyCount = round(moneyCount, 2);
-                SpannableStringBuilder moneybuilder = new SpannableStringBuilder();
-                moneybuilder.append(" ");
-                moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
-                        moneybuilder.length() - 1, moneybuilder.length(), 0);
-                moneybuilder.append("  Money Saved: $" + Double.toString(moneyCount));
-                moneyText.setText(moneybuilder);
+                moneyText.setText(" Money Saved: $" + Double.toString(moneyCount));
 
                 // Set images based on how long it has been!
                 // Sets text under the images based on how long it has been for the user

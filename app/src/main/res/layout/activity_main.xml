@@ -20,31 +20,76 @@
         android:layout_centerHorizontal="true"
         android:text="@string/alcoholFreeText" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Money Saved"
-        android:id="@+id/moneyText"
-        android:phoneNumber="false"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:elegantTextHeight="true"
-        android:layout_below="@+id/dateText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Date Counter"
-        android:id="@+id/dateText"
-        android:textAlignment="center"
-        android:textSize="25sp"
         android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="30dp" />
+        android:id="@+id/calendarCV"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/calendarimg"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="false"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/calendarimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateText"
+                android:layout_toRightOf="@+id/calendarimg"
+                android:textSize="24sp"
+                android:layout_alignParentRight="true"
+                android:text="Counter: 0 Days" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calendarCV"
+        android:id="@+id/moneyCV"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/moneyImg"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="false"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/moneyimg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/moneyText"
+                android:layout_toRightOf="@+id/moneyImg"
+                android:textSize="24sp"
+                android:layout_alignParentRight="true"
+                android:text="Money Saved" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -55,9 +100,10 @@
         android:scaleType="fitCenter"
         android:maxHeight="140dp"
         android:maxWidth="140dp"
-        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:layout_below="@+id/moneyCV"
         android:layout_centerHorizontal="true"
-        android:clickable="false" />
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -67,7 +113,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:paddingTop="50dp"
+        android:paddingTop="40dp"
         android:layout_below="@+id/growingImage"
         android:textSize="18sp"
         android:typeface="serif"

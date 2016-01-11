@@ -78,7 +78,7 @@ public class Register extends Activity {
         final Button signup = (Button) this.findViewById(R.id.registerButton);
         final Button login = (Button) this.findViewById(R.id.loginButtonRegister);
 
-
+        // Setup sorbiety date edittext, and initiate DatePickerDialog on click
         sobrietyDate = (EditText) this.findViewById(R.id.dateTI);
         sobrietyDate.setInputType(InputType.TYPE_NULL);
         sobrietyDate.requestFocus();
