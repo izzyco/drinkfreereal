@@ -1,7 +1,7 @@
 <resources>
 
     <color name="black_overlay">#66000000</color>
-    <color name="bluegreen">#68d48c</color>
+    <color name="bluegreen">#F268d48c</color>
     <color name="greygreen">#707873</color>
     <color name="greygreenopac">#CC707873</color>
     <color name="whiteopac">#F2FFFFFF</color>
