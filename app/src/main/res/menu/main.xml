@@ -9,17 +9,22 @@
         />
 
     <item android:id="@+id/action_about"
-        android:title="about"
-        android:orderInCategory="100"
+        android:title="About"
+        android:orderInCategory="400"
         app:showAsAction="never"
         />
     <item android:id="@+id/action_reset"
-        android:title="reset"
-        android:orderInCategory="100"
+        android:title="Reset Counter"
+        android:orderInCategory="300"
         app:showAsAction="never"
         />
     <item android:id="@+id/action_changeSponsor"
-        android:title="edit sponsor number"
+        android:title="Set Sponsor"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_addResources"
+        android:title="Additional Resources"
         android:orderInCategory="100"
         app:showAsAction="never"
         />

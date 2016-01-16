@@ -288,6 +288,9 @@ public class main extends ActionBarActivity {
             }
         }else if(id == R.id.action_changeSponsor){
             addSponsorNumberAction();
+        }else if(id == R.id.action_addResources){
+            Intent additionalRes = new Intent(getApplicationContext(), additionalRes.class);
+            startActivity(additionalRes);
         }
 
         return super.onOptionsItemSelected(item);

@@ -18,6 +18,7 @@
     <string name="title_activity_about">about</string>
     <string name="alcoholFreeText">Alcohol Free</string>
     <string name="mainImg">11</string>
+    <string name="title_activity_additional_res">additionalRes</string>
 
 
 </resources>
