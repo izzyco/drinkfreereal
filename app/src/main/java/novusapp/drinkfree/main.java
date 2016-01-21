@@ -18,14 +18,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.ActionBarActivity;
-import android.text.SpannableStringBuilder;
-import android.text.style.ImageSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -136,71 +133,49 @@ public class main extends ActionBarActivity {
                 // Set images based on how long it has been!
                 // Sets text under the images based on how long it has been for the user
                 TextView imgDescription = (TextView) findViewById(R.id.imageDescription);
-                ImageView growingImage = (ImageView) findViewById(R.id.growingImage);
+                ImageView growingImage1 = (ImageView) findViewById(R.id.growingImage);
+                ImageView growingImage2 = (ImageView) findViewById(R.id.growingImage2);
+                ImageView growingImage3 = (ImageView) findViewById(R.id.growingImage3);
+                ImageView growingImage4 = (ImageView) findViewById(R.id.growingImage4);
+                ImageView growingImage5 = (ImageView) findViewById(R.id.growingImage5);
+
                 if (dateCount < 2) {
                     // 1 Days Notification
-                    growingImage.setImageResource(R.drawable.seed);
-                    growingImage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "The Start is the Hardest!", Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    growingImage1.setVisibility(View.VISIBLE);
                     imgDescription.setText("Congrats: Getting Started Badge!");
                 } else if (dateCount >= 7 && dateCount < 21) {
                     // 1 Weeks Notification
-                    growingImage.setImageResource(R.drawable.seed);
-                    growingImage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "You have made the 7 day mark!", Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    growingImage1.setVisibility(View.VISIBLE);
                     imgDescription.setText("Congrats: 1 Week Badge!");
 
                 } else if (dateCount >= 21 && dateCount < 30) {
                     // 3 Weeks Notification
-                    growingImage.setImageResource(R.drawable.seed_3weeks);
-                    growingImage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "One week baby!", Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    growingImage1.setVisibility(View.VISIBLE);
+                    growingImage2.setVisibility(View.VISIBLE);
                     imgDescription.setText("Congrats: 3 Week Badge!");
 
                 } else if (dateCount >= 30 && dateCount < 60) {
                     // 1 month Notification
-                    growingImage.setImageResource(R.drawable.tree_simple);
-                    growingImage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "1 MONTHS!", Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    growingImage1.setVisibility(View.VISIBLE);
+                    growingImage2.setVisibility(View.VISIBLE);
+                    growingImage3.setVisibility(View.VISIBLE);
                     imgDescription.setText("Congrats: 1 Month Badge!");
 
                 } else if (dateCount >= 60 && dateCount < 180) {
                     // 2 month notification
-                    growingImage.setImageResource(R.drawable.tree_2months);
-                    growingImage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "Half a year!", Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    growingImage1.setVisibility(View.VISIBLE);
+                    growingImage2.setVisibility(View.VISIBLE);
+                    growingImage3.setVisibility(View.VISIBLE);
+                    growingImage4.setVisibility(View.VISIBLE);
                     imgDescription.setText("Congrats: 2 Month Badge!");
-
 
                 } else if (dateCount >= 180) {
                     // 1/2 Year Notification
-                    growingImage.setImageResource(R.drawable.tree_6months);
-                    growingImage.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            Toast.makeText(getApplicationContext(), "The Start is the Hardest!", Toast.LENGTH_LONG).show();
-                        }
-                    });
+                    growingImage1.setVisibility(View.VISIBLE);
+                    growingImage2.setVisibility(View.VISIBLE);
+                    growingImage3.setVisibility(View.VISIBLE);
+                    growingImage4.setVisibility(View.VISIBLE);
+                    growingImage5.setVisibility(View.VISIBLE);
                     imgDescription.setText("Congrats: Half Year Badge!");
 
                 }
