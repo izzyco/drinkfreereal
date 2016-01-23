@@ -26,7 +26,7 @@
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="black_overlay">#66000000</color>
-    <color name="bluegreen">#68d48c</color>
+    <color name="bluegreen">#F268d48c</color>
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
@@ -244,6 +244,7 @@
     <!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_about">about</string>
+    <string name="title_activity_additional_res">additionalRes</string>
     <string name="title_activity_loadingscreen">loadingscreen</string>
     <string name="title_activity_loadscreen">loadscreen</string>
     <string name="title_activity_login">login</string>
