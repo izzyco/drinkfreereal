@@ -132,7 +132,6 @@ public class main extends ActionBarActivity {
 
                 // Set images based on how long it has been!
                 // Sets text under the images based on how long it has been for the user
-                TextView imgDescription = (TextView) findViewById(R.id.imageDescription);
                 ImageView growingImage1 = (ImageView) findViewById(R.id.growingImage);
                 ImageView growingImage2 = (ImageView) findViewById(R.id.growingImage2);
                 ImageView growingImage3 = (ImageView) findViewById(R.id.growingImage3);
@@ -142,24 +141,19 @@ public class main extends ActionBarActivity {
                 if (dateCount < 2) {
                     // 1 Days Notification
                     growingImage1.setVisibility(View.VISIBLE);
-                    imgDescription.setText("Congrats: Getting Started Badge!");
                 } else if (dateCount >= 7 && dateCount < 21) {
                     // 1 Weeks Notification
                     growingImage1.setVisibility(View.VISIBLE);
-                    imgDescription.setText("Congrats: 1 Week Badge!");
-
                 } else if (dateCount >= 21 && dateCount < 30) {
                     // 3 Weeks Notification
                     growingImage1.setVisibility(View.VISIBLE);
                     growingImage2.setVisibility(View.VISIBLE);
-                    imgDescription.setText("Congrats: 3 Week Badge!");
 
                 } else if (dateCount >= 30 && dateCount < 60) {
                     // 1 month Notification
                     growingImage1.setVisibility(View.VISIBLE);
                     growingImage2.setVisibility(View.VISIBLE);
                     growingImage3.setVisibility(View.VISIBLE);
-                    imgDescription.setText("Congrats: 1 Month Badge!");
 
                 } else if (dateCount >= 60 && dateCount < 180) {
                     // 2 month notification
@@ -167,7 +161,6 @@ public class main extends ActionBarActivity {
                     growingImage2.setVisibility(View.VISIBLE);
                     growingImage3.setVisibility(View.VISIBLE);
                     growingImage4.setVisibility(View.VISIBLE);
-                    imgDescription.setText("Congrats: 2 Month Badge!");
 
                 } else if (dateCount >= 180) {
                     // 1/2 Year Notification
@@ -176,7 +169,6 @@ public class main extends ActionBarActivity {
                     growingImage3.setVisibility(View.VISIBLE);
                     growingImage4.setVisibility(View.VISIBLE);
                     growingImage5.setVisibility(View.VISIBLE);
-                    imgDescription.setText("Congrats: Half Year Badge!");
 
                 }
 
@@ -196,7 +188,6 @@ public class main extends ActionBarActivity {
             public void onCancelled(FirebaseError firebaseError) {
 
             }
-
 
         });
 
