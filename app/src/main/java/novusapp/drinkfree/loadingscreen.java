@@ -14,11 +14,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,7 +59,7 @@ public class loadingscreen extends Activity {
                         startActivity(mainIntent);
                         finish();
                     } else {
-                        Intent regIntent = new Intent(getApplicationContext(), Register.class);
+                        Intent regIntent = new Intent(getApplicationContext(), register.class);
                         startActivity(regIntent);
                         finish();
                     }
