@@ -1,3 +1,9 @@
+/**
+ AdditionalRes.java : Shows additional resources that the user may utilize
+ Author : Ivan Zhang
+ Company : Novusapp.com
+ */
+
 package novusapp.drinkfree;
 
 import android.os.Bundle;
@@ -17,6 +23,7 @@ public class additionalRes extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_additional_res);
 
+        // Init UI & Set Them
         TextView resource1 = (TextView) findViewById(R.id.addResource1);
         TextView resource2 = (TextView) findViewById(R.id.addResource2);
         TextView resource3 = (TextView) findViewById(R.id.addResource3);
