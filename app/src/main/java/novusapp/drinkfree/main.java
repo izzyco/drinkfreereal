@@ -49,6 +49,7 @@ public class main extends ActionBarActivity {
     static String DATE_FORMAT = "EEE MMM dd HH:mm:ss z yyyy";
     static String FULL_NAME = "fullname";
     static String ACCOUNT = "account";
+    static String FACT = "fact";
     static String START_DATE = "startdate";
     static String MONEY_COUNT = "moneycount";
     static String SPONSORCALL_REF = "sponsorcall_ref";
@@ -109,24 +110,7 @@ public class main extends ActionBarActivity {
 
                 // Create welcome text, adds the name if there is a name on the account
                 nameText.setText("Welcome, " + account_name);
-
-                // Creates date counter for the user and adds a calendar to the beginning of it
-//                SpannableStringBuilder countBuilder = new SpannableStringBuilder();
-//                countBuilder.append(" ");
-//                countBuilder.setSpan(new ImageSpan(getApplication(), R.drawable.calendarimg),
-//                        countBuilder.length() - 1, countBuilder.length(), 0);
-//                countBuilder.append("  Date Counter: " + Integer.toString(dateCount) + " Days");
-//                countText.setText(countBuilder);
-
                 countText.setText(" Date Counter: " + Integer.toString(dateCount) + " Days");
-
-                // Creates the money saved counter, plus adds a money icon at the beginning of it
-
-//                SpannableStringBuilder moneybuilder = new SpannableStringBuilder();
-//                moneybuilder.append(" ");
-//                moneybuilder.setSpan(new ImageSpan(getApplication(), R.drawable.moneyimg),
-//                        moneybuilder.length() - 1, moneybuilder.length(), 0);
-//                moneybuilder.append("  Money Saved: $" + Double.toString(moneyCount));
                 moneyCount = round(moneyCount, 2);
                 moneyText.setText(" Money Saved: $" + Double.toString(moneyCount));
 
@@ -173,14 +157,13 @@ public class main extends ActionBarActivity {
                 }
 
                 // Random tip to show at the time
-                int childrenCount = (int) dataSnapshot.child("fact").getChildrenCount();
+                int childrenCount = (int) dataSnapshot.child(FACT).getChildrenCount();
                 Random rand = new Random();
                 int randCount = rand.nextInt(--childrenCount);
                 Log.v("RandCount", Integer.toString(randCount));
-                if (dataSnapshot.child("fact").child(Integer.toString(randCount)).exists()) {
-                    tipText.setText(dataSnapshot.child("fact").child(Integer.toString(randCount)).getValue().toString());
+                if (dataSnapshot.child(FACT).child(Integer.toString(randCount)).exists()) {
+                    tipText.setText(dataSnapshot.child(FACT).child(Integer.toString(randCount)).getValue().toString());
                 }
-
 
             }
 
@@ -292,6 +275,11 @@ public class main extends ActionBarActivity {
         return bd.doubleValue();
     }
 
+
+    /**
+     *  Allows the user to add a sponsor number, in which they can immediately call their sponsor from
+     *
+     */
     private void addSponsorNumberAction(){
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
 

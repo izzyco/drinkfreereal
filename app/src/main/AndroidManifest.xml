@@ -27,7 +27,7 @@
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".register"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >

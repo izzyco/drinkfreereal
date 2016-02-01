@@ -43,7 +43,7 @@ import java.util.UUID;
 
 import javax.microedition.khronos.egl.EGLDisplay;
 
-public class Register extends Activity {
+public class register extends Activity {
 
     static final String FIREBASE_REF = "https://drinkfreeapp.firebaseio.com/";
     static final String ACCOUNT = "account";
