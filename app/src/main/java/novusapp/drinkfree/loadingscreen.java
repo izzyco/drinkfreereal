@@ -32,6 +32,8 @@ import com.firebase.client.ValueEventListener;
 
 public class loadingscreen extends Activity {
 
+    private static final String DID_LOGIN = "didlogin";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +46,6 @@ public class loadingscreen extends Activity {
         if(isNetworkAvailable() == false) {
             text.setVisibility(View.VISIBLE);
             Toast.makeText(getApplicationContext(), "Please enable internet", Toast.LENGTH_LONG).show();
-            Log.d("NetworkAvailable", "Hello");
         }else {
 
             // Setup Firebase
@@ -54,7 +55,7 @@ public class loadingscreen extends Activity {
             final String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                     Settings.Secure.ANDROID_ID);
 
-            myFirebaseRef.child("didlogin").addValueEventListener(new ValueEventListener() {
+            myFirebaseRef.child(DID_LOGIN).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     if (dataSnapshot.child(android_id).exists()) {

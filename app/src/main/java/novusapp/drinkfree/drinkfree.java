@@ -39,11 +39,11 @@ import java.util.EventListener;
 
 public class drinkfree extends Activity {
     ValueEventListener loginListener;
-    static final String FIREBASE_REF = "https://drinkfreeapp.firebaseio.com/";
-    static final String ACCOUNT = "account";
-    static final String EMAIL = "email";
-    static final String PASSWORD = "password";
-    static final String DID_LOGIN = "didlogin";
+    private static final String FIREBASE_REF = "https://drinkfreeapp.firebaseio.com/";
+    private static final String ACCOUNT = "account";
+    private static final String EMAIL = "email";
+    private static final String PASSWORD = "password";
+    private static final String DID_LOGIN = "didlogin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
