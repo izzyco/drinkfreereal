@@ -8,13 +8,8 @@
 package novusapp.drinkfree;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import com.firebase.client.Firebase;
 
 
 public class settings extends Activity {

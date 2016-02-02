@@ -18,8 +18,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.InputType;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -37,11 +36,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.UUID;
-
-import javax.microedition.khronos.egl.EGLDisplay;
 
 public class register extends Activity {
 
