@@ -220,9 +220,6 @@ public class main extends ActionBarActivity {
 
             alert.show();
             return true;
-        }else if(id == R.id.action_about){
-            Intent mainIntent = new Intent(getApplicationContext(), about.class);
-            startActivity(mainIntent);
         }else if(id == R.id.action_sponsor){
             SharedPreferences prefs = getSharedPreferences(PREF_FILE, MODE_PRIVATE);
             String sponsorPhoneNumber = prefs.getString(SPONSORCALL_REF, null);

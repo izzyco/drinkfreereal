@@ -21,12 +21,12 @@ public class about extends ActionBarActivity {
         setContentView(R.layout.activity_about);
 
         // Clicking the logo creates a toast showing Novus App
-        ImageView logo = (ImageView) findViewById(R.id.about_logo);
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Created from Novus App ( Novusapp.com )", Toast.LENGTH_LONG ).show();
-            }
-        });
+        //ImageView logo = (ImageView) findViewById(R.id.about_logo);
+//        logo.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getApplicationContext(), "Created from Novus App ( Novusapp.com )", Toast.LENGTH_LONG ).show();
+//            }
+//        });
     }
 }
