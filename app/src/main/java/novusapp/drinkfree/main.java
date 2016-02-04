@@ -26,6 +26,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -123,34 +125,130 @@ public class main extends ActionBarActivity {
                 if (dateCount < 2) {
                     // 1 Days Notification
                     growingImage1.setVisibility(View.VISIBLE);
+                    growingImage1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 1 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                 } else if (dateCount >= 7 && dateCount < 21) {
                     // 1 Weeks Notification
                     growingImage1.setVisibility(View.VISIBLE);
+                    growingImage1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 1 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                 } else if (dateCount >= 21 && dateCount < 30) {
                     // 3 Weeks Notification
                     growingImage1.setVisibility(View.VISIBLE);
+                    growingImage1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 1 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage2.setVisibility(View.VISIBLE);
+                    growingImage2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 3 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
 
                 } else if (dateCount >= 30 && dateCount < 60) {
                     // 1 month Notification
                     growingImage1.setVisibility(View.VISIBLE);
+                    growingImage1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 1 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage2.setVisibility(View.VISIBLE);
+                    growingImage2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 3 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage3.setVisibility(View.VISIBLE);
+                    growingImage3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "1 Month Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
 
                 } else if (dateCount >= 60 && dateCount < 180) {
                     // 2 month notification
                     growingImage1.setVisibility(View.VISIBLE);
+                    growingImage1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 1 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage2.setVisibility(View.VISIBLE);
+                    growingImage2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 3 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage3.setVisibility(View.VISIBLE);
+                    growingImage3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "1 Month Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage4.setVisibility(View.VISIBLE);
+                    growingImage4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "2 Month Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
 
                 } else if (dateCount >= 180) {
                     // 1/2 Year Notification
                     growingImage1.setVisibility(View.VISIBLE);
+                    growingImage1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 1 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage2.setVisibility(View.VISIBLE);
+                    growingImage2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "Week 3 Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage3.setVisibility(View.VISIBLE);
+                    growingImage3.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "1 Month Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage4.setVisibility(View.VISIBLE);
+                    growingImage4.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "2 Months Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
                     growingImage5.setVisibility(View.VISIBLE);
+                    growingImage5.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Toast.makeText(getApplicationContext(), "6 Months Badge", Toast.LENGTH_LONG).show();
+                        }
+                    });
 
                 }
 
