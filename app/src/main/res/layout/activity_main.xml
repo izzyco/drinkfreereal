@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/name"
-        android:textSize="33sp"
+        android:textSize="28sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/alcoholFreeText"
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/dateText"
                 android:layout_toRightOf="@+id/calendarimg"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:layout_alignParentRight="true"
                 android:text="Counter: 0 Days"
                 android:typeface="normal" />
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/moneyText"
                 android:layout_toRightOf="@+id/moneyImg"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:layout_alignParentRight="true"
                 android:text="Money Saved" />
 
@@ -248,7 +248,7 @@
                 android:layout_height="fill_parent"
                 android:text="Great job and keep up the great work!"
                 android:id="@+id/tipText"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:typeface="normal"
                 android:textAlignment="center"
                 android:gravity="center"
