@@ -248,7 +248,7 @@
                 android:layout_height="fill_parent"
                 android:text="Great job and keep up the great work!"
                 android:id="@+id/tipText"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 android:typeface="normal"
                 android:textAlignment="center"
                 android:gravity="center"
