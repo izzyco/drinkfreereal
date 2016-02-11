@@ -24,7 +24,6 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
 
-
 public class loadingscreen extends Activity {
 
     private static final String DID_LOGIN = "didlogin";

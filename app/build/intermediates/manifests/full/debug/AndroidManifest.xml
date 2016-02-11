@@ -33,7 +33,7 @@
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
         <activity
-            android:name="novusapp.drinkfree.Register"
+            android:name="novusapp.drinkfree.register"
             android:label="@string/title_activity_register"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
@@ -47,12 +47,6 @@
             android:name="novusapp.drinkfree.drinkfree"
             android:label="DrinkFree"
             android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name="novusapp.drinkfree.about"
-            android:label="@string/title_activity_about"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
         <activity
             android:name="novusapp.drinkfree.additionalRes"

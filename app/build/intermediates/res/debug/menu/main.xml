@@ -7,12 +7,6 @@
         android:title="Call Sponsor"
         app:showAsAction="ifRoom"
         />
-
-    <item android:id="@+id/action_about"
-        android:title="About"
-        android:orderInCategory="400"
-        app:showAsAction="never"
-        />
     <item android:id="@+id/action_reset"
         android:title="Reset Counter"
         android:orderInCategory="300"
