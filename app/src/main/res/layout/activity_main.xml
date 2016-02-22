@@ -174,7 +174,7 @@
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="8dp"
                         android:layout_alignTop="@+id/growingImage"
-                        android:layout_toEndOf="@+id/badgesTitle" />
+                        android:layout_toEndOf="@+id/growingImage2" />
 
                     <ImageView
                         android:layout_width="wrap_content"
