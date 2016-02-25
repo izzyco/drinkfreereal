@@ -35,7 +35,8 @@
         android:layout_below="@+id/nameTI"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/nameTI"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:maxLength="30" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -52,7 +53,8 @@
         android:layout_below="@+id/username"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/username"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:maxLength="30" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -68,7 +70,8 @@
         android:layout_below="@+id/emailTI"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/emailTI"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:maxLength="30" />
 
     <Button
         android:layout_width="wrap_content"
@@ -100,7 +103,8 @@
         android:backgroundTint="@color/whiteopac"
         android:focusable="true"
         android:textColor="@color/greygreenopac"
-        android:textColorHint="@color/greygreenopac" />
+        android:textColorHint="@color/greygreenopac"
+        android:maxLength="30" />
 
     <ImageView
         android:layout_width="wrap_content"
