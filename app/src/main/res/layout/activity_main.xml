@@ -121,7 +121,7 @@
 
                     <TextView
                         android:layout_width="fill_parent"
-                        android:text="Accomplishment Badges"
+                        android:text="Accomplishment Badges                                             "
                         android:id="@+id/badgesTitle"
                         android:textSize="20sp"
                         android:typeface="normal"
