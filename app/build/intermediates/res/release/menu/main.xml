@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="novusapp.drinkfree.main">
+    <item
+        android:id="@+id/action_sponsor"
+        android:title="Call Sponsor"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/action_reset"
+        android:title="Reset Counter"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_changeSponsor"
+        android:title="Set Sponsor"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        />
+    <item android:id="@+id/action_addResources"
+        android:title="Additional Resources"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
+</menu>
+<!-- From: file:/Users/izhang/Desktop/Programming%20Work/DrinkFree/app/src/main/res/menu/main.xml -->
